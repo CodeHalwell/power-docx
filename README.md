@@ -23,6 +23,14 @@ It is a pure-Python library for creating, reading, and updating Microsoft Word
 pip install power-docx
 ```
 
+To install the bundled coding-agent skill (Claude Code / Agent Skills) into
+`~/.claude/skills/power-docx`:
+
+```
+power-docx-skill install
+# or: python -m power_docx.skill install
+```
+
 ## Example
 
 ```python

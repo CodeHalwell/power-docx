@@ -61,7 +61,7 @@ uv run behave --stop       # or: make accept
 
 `pytest` is configured with `filterwarnings = ["error"]` — warnings fail the
 suite. Test classes are named `Test`/`Describe`; test functions are prefixed
-`test_`/`it_`/`they_`/`and_`/`but_` (see `pyproject.toml`).
+`it_`/`its_`/`they_`/`and_`/`but_` (see `pyproject.toml`).
 
 ## Lint and type-checking
 
