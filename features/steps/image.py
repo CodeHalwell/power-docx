@@ -2,7 +2,7 @@
 
 from behave import given, then, when
 
-from docx.image.image import Image
+from power_docx.image.image import Image
 
 from helpers import test_file
 

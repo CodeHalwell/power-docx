@@ -14,7 +14,7 @@ The latent style collection for a document is accessed using the
 
     >>> latent_styles = document.styles.latent_styles
     >>> latent_styles
-    <docx.styles.LatentStyles object at 0x1045dd550>
+    <power_docx.styles.LatentStyles object at 0x1045dd550>
 
 **Iteration.** |LatentStyles| should support iteration of contained
 |_LatentStyle| objects in document order.

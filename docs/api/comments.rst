@@ -4,7 +4,7 @@
 Comment-related objects
 =======================
 
-.. currentmodule:: docx.comments
+.. currentmodule:: power_docx.comments
 
 
 |Comments| objects

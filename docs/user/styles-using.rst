@@ -15,13 +15,13 @@ Styles are accessed using the :attr:`.Document.styles` attribute::
     >>> document = Document()
     >>> styles = document.styles
     >>> styles
-    <docx.styles.styles.Styles object at 0x10a7c4f50>
+    <power_docx.styles.styles.Styles object at 0x10a7c4f50>
 
 The |Styles| object provides dictionary-style access to defined styles by
 name::
 
     >>> styles['Normal']
-    <docx.styles.style._ParagraphStyle object at <0x10a7c4f6b>
+    <power_docx.styles.style._ParagraphStyle object at <0x10a7c4f6b>
 
 .. note:: Built-in styles are stored in a WordprocessingML file using their
    English name, e.g. 'Heading 1', even though users working on a localized
@@ -39,7 +39,7 @@ The |Styles| object is also iterable. By using the identification properties
 on |BaseStyle|, various subsets of the defined styles can be generated. For
 example, this code will produce a list of the defined paragraph styles::
 
-   >>> from docx.enum.style import WD_STYLE_TYPE
+   >>> from power_docx.enum.style import WD_STYLE_TYPE
    >>> styles = document.styles
    >>> paragraph_styles = [
    ...     s for s in styles if s.type == WD_STYLE_TYPE.PARAGRAPH
@@ -61,7 +61,7 @@ attribute. Assigning a style object to this attribute applies that style::
     >>> document = Document()
     >>> paragraph = document.add_paragraph()
     >>> paragraph.style
-    <docx.styles.style._ParagraphStyle object at <0x11a7c4c50>
+    <power_docx.styles.style._ParagraphStyle object at <0x11a7c4c50>
     >>> paragraph.style.name
     'Normal'
     >>> paragraph.style = document.styles['Heading 1']
@@ -73,7 +73,7 @@ lookup for you::
 
     >>> paragraph.style = 'List Bullet'
     >>> paragraph.style
-    <docx.styles.style._ParagraphStyle object at <0x10a7c4f84>
+    <power_docx.styles.style._ParagraphStyle object at <0x10a7c4f84>
     >>> paragraph.style.name
     'List Bullet'
 
@@ -95,7 +95,7 @@ Add or delete a style
 A new style can be added to the document by specifying a unique name and
 a style type::
 
-    >>> from docx.enum.style import WD_STYLE_TYPE
+    >>> from power_docx.enum.style import WD_STYLE_TYPE
     >>> styles = document.styles
     >>> style = styles.add_style('Citation', WD_STYLE_TYPE.PARAGRAPH)
     >>> style.name
@@ -110,7 +110,7 @@ style should inherit formatting settings from::
     None
     >>> style.base_style = styles['Normal']
     >>> style.base_style
-    <docx.styles.style._ParagraphStyle object at 0x10a7a9550>
+    <power_docx.styles.style._ParagraphStyle object at 0x10a7a9550>
     >>> style.base_style.name
     'Normal'
 
@@ -149,14 +149,14 @@ properties, see the |Font| API documentation.
 
 The font for a style can be accessed like this::
 
-    >>> from docx import Document
+    >>> from power_docx import Document
     >>> document = Document()
     >>> style = document.styles['Normal']
     >>> font = style.font
 
 Typeface and size are set like this::
 
-    >>> from docx.shared import Pt
+    >>> from power_docx.shared import Pt
     >>> font.name = 'Calibri'
     >>> font.size = Pt(12)
 
@@ -214,8 +214,8 @@ documentation page for the |ParagraphFormat| object.
 Here's an example of how you would create a paragraph style having hanging
 indentation of 1/4 inch, 12 points spacing above, and widow/orphan control::
 
-    >>> from docx.enum.style import WD_STYLE_TYPE
-    >>> from docx.shared import Inches, Pt
+    >>> from power_docx.enum.style import WD_STYLE_TYPE
+    >>> from power_docx.shared import Inches, Pt
     >>> document = Document()
     >>> style = document.styles.add_style('Indent', WD_STYLE_TYPE.PARAGRAPH)
     >>> paragraph_format = style.paragraph_format
@@ -243,7 +243,7 @@ specified.
 Here's an example of how you would change the next paragraph style of the
 *Heading 1* style to *Body Text*::
 
-    >>> from docx import Document
+    >>> from power_docx import Document
     >>> document = Document()
     >>> styles = document.styles
 
@@ -295,7 +295,7 @@ Display a style in the style gallery
 The following code will cause the 'Body Text' paragraph style to appear first
 in the style gallery::
 
-    >>> from docx import Document
+    >>> from power_docx import Document
     >>> document = Document()
     >>> style = document.styles['Body Text']
 
@@ -343,7 +343,7 @@ access by style name::
 
     >>> latent_quote = latent_styles['Quote']
     >>> latent_quote
-    <docx.styles.latent.LatentStyle object at 0x10a7c4f50>
+    <power_docx.styles.latent.LatentStyle object at 0x10a7c4f50>
     >>> latent_quote.priority
     29
 
@@ -385,7 +385,7 @@ A latent style definition can be deleted by calling its
 :meth:`~.LatentStyle.delete` method::
 
     >>> latent_styles['Light Grid']
-    <docx.styles.latent.LatentStyle object at 0x10a7c4f50>
+    <power_docx.styles.latent.LatentStyle object at 0x10a7c4f50>
     >>> latent_styles['Light Grid'].delete()
     >>> latent_styles['Light Grid']
     KeyError: no latent style with name 'Light Grid'

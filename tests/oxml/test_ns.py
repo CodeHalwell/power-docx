@@ -1,8 +1,8 @@
-"""Test suite for docx.oxml.ns."""
+"""Test suite for power_docx.oxml.ns."""
 
 import pytest
 
-from docx.oxml.ns import NamespacePrefixedTag
+from power_docx.oxml.ns import NamespacePrefixedTag
 
 
 class DescribeNamespacePrefixedTag:

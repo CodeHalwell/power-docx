@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the docx.section module."""
+"""Unit test suite for the power_docx.section module."""
 
 from __future__ import annotations
 
@@ -8,16 +8,16 @@ from typing import cast
 
 import pytest
 
-from docx import Document
-from docx.enum.section import WD_HEADER_FOOTER, WD_ORIENTATION, WD_SECTION
-from docx.oxml.document import CT_Document
-from docx.oxml.section import CT_SectPr
-from docx.parts.document import DocumentPart
-from docx.parts.hdrftr import FooterPart, HeaderPart
-from docx.section import Section, Sections, _BaseHeaderFooter, _Footer, _Header
-from docx.shared import Inches, Length
-from docx.table import Table
-from docx.text.paragraph import Paragraph
+from power_docx import Document
+from power_docx.enum.section import WD_HEADER_FOOTER, WD_ORIENTATION, WD_SECTION
+from power_docx.oxml.document import CT_Document
+from power_docx.oxml.section import CT_SectPr
+from power_docx.parts.document import DocumentPart
+from power_docx.parts.hdrftr import FooterPart, HeaderPart
+from power_docx.section import Section, Sections, _BaseHeaderFooter, _Footer, _Header
+from power_docx.shared import Inches, Length
+from power_docx.table import Table
+from power_docx.text.paragraph import Paragraph
 
 from .unitutil.cxml import element, xml
 from .unitutil.file import test_file
@@ -33,7 +33,7 @@ from .unitutil.mock import (
 
 
 class DescribeSections:
-    """Unit-test suite for `docx.section.Sections`."""
+    """Unit-test suite for `power_docx.section.Sections`."""
 
     def it_knows_how_many_sections_it_contains(self, document_part_: Mock):
         document_elm = cast(
@@ -107,7 +107,7 @@ class DescribeSections:
 
     @pytest.fixture
     def Section_(self, request: FixtureRequest):
-        return class_mock(request, "docx.section.Section")
+        return class_mock(request, "power_docx.section.Section")
 
     @pytest.fixture
     def section_(self, request: FixtureRequest):
@@ -115,7 +115,7 @@ class DescribeSections:
 
 
 class DescribeSection:
-    """Unit-test suite for `docx.section.Section`."""
+    """Unit-test suite for `power_docx.section.Section`."""
 
     @pytest.mark.parametrize(
         ("sectPr_cxml", "expected_value"),
@@ -528,7 +528,7 @@ class DescribeSection:
 
     @pytest.fixture
     def _Footer_(self, request: FixtureRequest):
-        return class_mock(request, "docx.section._Footer")
+        return class_mock(request, "power_docx.section._Footer")
 
     @pytest.fixture
     def footer_(self, request: FixtureRequest):
@@ -536,7 +536,7 @@ class DescribeSection:
 
     @pytest.fixture
     def _Header_(self, request: FixtureRequest):
-        return class_mock(request, "docx.section._Header")
+        return class_mock(request, "power_docx.section._Header")
 
     @pytest.fixture
     def header_(self, request: FixtureRequest):
@@ -544,7 +544,7 @@ class DescribeSection:
 
 
 class Describe_BaseHeaderFooter:
-    """Unit-test suite for `docx.section._BaseHeaderFooter`."""
+    """Unit-test suite for `power_docx.section._BaseHeaderFooter`."""
 
     @pytest.mark.parametrize(("has_definition", "expected_value"), [(False, True), (True, False)])
     def it_knows_when_its_linked_to_the_previous_header_or_footer(
@@ -700,7 +700,7 @@ class Describe_BaseHeaderFooter:
 
 
 class Describe_Footer:
-    """Unit-test suite for `docx.section._Footer`."""
+    """Unit-test suite for `power_docx.section._Footer`."""
 
     def it_can_add_a_footer_part_to_help(self, document_part_: Mock, footer_part_: Mock):
         sectPr = cast(CT_SectPr, element("w:sectPr{r:a=b}"))
@@ -757,7 +757,7 @@ class Describe_Footer:
         prior_sectPr, sectPr = cast(CT_SectPr, doc_elm[0]), cast(CT_SectPr, doc_elm[1])
         footer = _Footer(sectPr, document_part_, WD_HEADER_FOOTER.EVEN_PAGE)
         # ---mock must occur after construction of "real" footer---
-        _Footer_ = class_mock(request, "docx.section._Footer", return_value=footer_)
+        _Footer_ = class_mock(request, "power_docx.section._Footer", return_value=footer_)
 
         prior_footer = footer._prior_headerfooter
 
@@ -789,7 +789,7 @@ class Describe_Footer:
 
 
 class Describe_Header:
-    """Unit-test suite for `docx.section._Header`."""
+    """Unit-test suite for `power_docx.section._Header`."""
 
     def it_can_add_a_header_part_to_help(self, document_part_: Mock, header_part_: Mock):
         sectPr = cast(CT_SectPr, element("w:sectPr{r:a=b}"))
@@ -846,7 +846,7 @@ class Describe_Header:
         prior_sectPr, sectPr = cast(CT_SectPr, doc_elm[0]), cast(CT_SectPr, doc_elm[1])
         header = _Header(sectPr, document_part_, WD_HEADER_FOOTER.PRIMARY)
         # ---mock must occur after construction of "real" header---
-        _Header_ = class_mock(request, "docx.section._Header", return_value=header_)
+        _Header_ = class_mock(request, "power_docx.section._Header", return_value=header_)
 
         prior_header = header._prior_headerfooter
 

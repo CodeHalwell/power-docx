@@ -1,14 +1,14 @@
-"""Unit test suite for docx.parts.image module."""
+"""Unit test suite for power_docx.parts.image module."""
 
 import pytest
 
-from docx.image.image import Image
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.packuri import PackURI
-from docx.opc.part import PartFactory
-from docx.package import Package
-from docx.parts.image import ImagePart
+from power_docx.image.image import Image
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from power_docx.opc.packuri import PackURI
+from power_docx.opc.part import PartFactory
+from power_docx.package import Package
+from power_docx.parts.image import ImagePart
 
 from ..unitutil.file import test_file
 from ..unitutil.mock import ANY, initializer_mock, instance_mock, method_mock

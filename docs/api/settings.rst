@@ -4,7 +4,7 @@
 Document |Settings| objects
 ---------------------------
 
-.. currentmodule:: docx.settings
+.. currentmodule:: power_docx.settings
 
 .. autoclass:: Settings()
    :members:

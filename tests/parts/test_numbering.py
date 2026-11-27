@@ -1,9 +1,9 @@
-"""Test suite for the docx.parts.numbering module."""
+"""Test suite for the power_docx.parts.numbering module."""
 
 import pytest
 
-from docx.oxml.numbering import CT_Numbering
-from docx.parts.numbering import NumberingPart, _NumberingDefinitions
+from power_docx.oxml.numbering import CT_Numbering
+from power_docx.parts.numbering import NumberingPart, _NumberingDefinitions
 
 from ..oxml.unitdata.numbering import a_num, a_numbering
 from ..unitutil.mock import class_mock, instance_mock
@@ -39,7 +39,7 @@ class DescribeNumberingPart:
     def _NumberingDefinitions_(self, request, numbering_definitions_):
         return class_mock(
             request,
-            "docx.parts.numbering._NumberingDefinitions",
+            "power_docx.parts.numbering._NumberingDefinitions",
             return_value=numbering_definitions_,
         )
 

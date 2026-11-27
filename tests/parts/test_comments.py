@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.parts.hdrftr module."""
+"""Unit test suite for the power_docx.parts.hdrftr module."""
 
 from __future__ import annotations
 
@@ -6,21 +6,21 @@ from typing import cast
 
 import pytest
 
-from docx.comments import Comments
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.packuri import PackURI
-from docx.opc.part import PartFactory
-from docx.oxml.comments import CT_Comments
-from docx.package import Package
-from docx.parts.comments import CommentsPart
+from power_docx.comments import Comments
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from power_docx.opc.packuri import PackURI
+from power_docx.opc.part import PartFactory
+from power_docx.oxml.comments import CT_Comments
+from power_docx.package import Package
+from power_docx.parts.comments import CommentsPart
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import FixtureRequest, Mock, class_mock, instance_mock, method_mock
 
 
 class DescribeCommentsPart:
-    """Unit test suite for `docx.parts.comments.CommentsPart` objects."""
+    """Unit test suite for `power_docx.parts.comments.CommentsPart` objects."""
 
     def it_is_used_by_the_part_loader_to_construct_a_comments_part(
         self, package_: Mock, CommentsPart_load_: Mock, comments_part_: Mock
@@ -68,7 +68,7 @@ class DescribeCommentsPart:
 
     @pytest.fixture
     def Comments_(self, request: FixtureRequest) -> Mock:
-        return class_mock(request, "docx.parts.comments.Comments")
+        return class_mock(request, "power_docx.parts.comments.Comments")
 
     @pytest.fixture
     def comments_(self, request: FixtureRequest) -> Mock:

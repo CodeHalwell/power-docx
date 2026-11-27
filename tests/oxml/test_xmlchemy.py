@@ -1,12 +1,12 @@
-"""Test suite for docx.oxml.xmlchemy."""
+"""Test suite for power_docx.oxml.xmlchemy."""
 
 import pytest
 
-from docx.oxml.exceptions import InvalidXmlError
-from docx.oxml.ns import qn
-from docx.oxml.parser import parse_xml, register_element_cls
-from docx.oxml.simpletypes import BaseIntType
-from docx.oxml.xmlchemy import (
+from power_docx.oxml.exceptions import InvalidXmlError
+from power_docx.oxml.ns import qn
+from power_docx.oxml.parser import parse_xml, register_element_cls
+from power_docx.oxml.simpletypes import BaseIntType
+from power_docx.oxml.xmlchemy import (
     BaseOxmlElement,
     Choice,
     OneAndOnlyOne,

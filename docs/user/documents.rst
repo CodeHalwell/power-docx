@@ -25,7 +25,7 @@ Opening a document
 The simplest way to get started is to open a new document without specifying
 a file to open::
 
-    from docx import Document
+    from power_docx import Document
 
     document = Document()
     document.save('test.docx')

@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit-test suite for `docx.oxml.comments` module."""
+"""Unit-test suite for `power_docx.oxml.comments` module."""
 
 from __future__ import annotations
 
@@ -8,13 +8,13 @@ from typing import cast
 
 import pytest
 
-from docx.oxml.comments import CT_Comments
+from power_docx.oxml.comments import CT_Comments
 
 from ..unitutil.cxml import element
 
 
 class DescribeCT_Comments:
-    """Unit-test suite for `docx.oxml.comments.CT_Comments`."""
+    """Unit-test suite for `power_docx.oxml.comments.CT_Comments`."""
 
     @pytest.mark.parametrize(
         ("cxml", "expected_value"),

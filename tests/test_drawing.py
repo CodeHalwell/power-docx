@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the `docx.drawing` module."""
+"""Unit test suite for the `power_docx.drawing` module."""
 
 from __future__ import annotations
 
@@ -8,18 +8,18 @@ from typing import cast
 
 import pytest
 
-from docx.drawing import Drawing
-from docx.image.image import Image
-from docx.oxml.drawing import CT_Drawing
-from docx.parts.document import DocumentPart
-from docx.parts.image import ImagePart
+from power_docx.drawing import Drawing
+from power_docx.image.image import Image
+from power_docx.oxml.drawing import CT_Drawing
+from power_docx.parts.document import DocumentPart
+from power_docx.parts.image import ImagePart
 
 from .unitutil.cxml import element
 from .unitutil.mock import FixtureRequest, Mock, instance_mock
 
 
 class DescribeDrawing:
-    """Unit-test suite for `docx.drawing.Drawing` objects."""
+    """Unit-test suite for `power_docx.drawing.Drawing` objects."""
 
     @pytest.mark.parametrize(
         ("cxml", "expected_value"),

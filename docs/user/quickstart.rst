@@ -11,7 +11,7 @@ Opening a document
 
 First thing you'll need is a document to work on. The easiest way is this::
 
-    from docx import Document
+    from power_docx import Document
 
     document = Document()
 
@@ -199,7 +199,7 @@ page.
 To get the image the size you want, you can specify either its width or height
 in convenient units, like inches or centimeters::
 
-    from docx.shared import Inches
+    from power_docx.shared import Inches
 
     document.add_picture('image-filename.png', width=Inches(1.0))
 
@@ -211,7 +211,7 @@ look stretched.
 The ``Inches`` and ``Cm`` classes are provided to let you specify measurements
 in handy units. Internally, |docx| uses English Metric Units, 914400 to the
 inch. So if you forget and just put something like ``width=2`` you'll get an
-extremely small image :). You'll need to import them from the ``docx.shared``
+extremely small image :). You'll need to import them from the ``power_docx.shared``
 sub-package. You can use them in arithmetic just like they were an integer,
 which in fact they are. So an expression like ``width = Inches(3)
 / thing_count`` works just fine.

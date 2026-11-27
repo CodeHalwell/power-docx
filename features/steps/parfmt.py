@@ -2,10 +2,10 @@
 
 from behave import given, then, when
 
-from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
-from docx.shared import Pt
-from docx.text.tabstops import TabStops
+from power_docx import Document
+from power_docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
+from power_docx.shared import Pt
+from power_docx.text.tabstops import TabStops
 
 from helpers import test_docx
 

@@ -3,10 +3,10 @@
 from behave import given, then, when
 from behave.runner import Context
 
-from docx import Document
-from docx.enum.section import WD_ORIENT, WD_SECTION
-from docx.section import Section
-from docx.shared import Inches
+from power_docx import Document
+from power_docx.enum.section import WD_ORIENT, WD_SECTION
+from power_docx.section import Section
+from power_docx.shared import Inches
 
 from helpers import test_docx
 

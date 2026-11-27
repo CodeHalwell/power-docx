@@ -1,5 +1,5 @@
 {
-  "src/docx/*.py" : {
+  "src/power_docx/*.py" : {
     "alternate" : [
       "tests/{dirname}/test_{basename}.py"
     ],
@@ -7,7 +7,7 @@
   },
   "tests/**/test_*.py" : {
     "alternate" : [
-      "src/docx/{dirname}/{basename}.py"
+      "src/power_docx/{dirname}/{basename}.py"
     ],
     "type" : "test"
   }

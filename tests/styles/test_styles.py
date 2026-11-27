@@ -1,12 +1,12 @@
-"""Unit test suite for the docx.styles.styles module."""
+"""Unit test suite for the power_docx.styles.styles module."""
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
-from docx.oxml.styles import CT_Style, CT_Styles
-from docx.styles.latent import LatentStyles
-from docx.styles.style import BaseStyle
-from docx.styles.styles import Styles
+from power_docx.enum.style import WD_STYLE_TYPE
+from power_docx.oxml.styles import CT_Style, CT_Styles
+from power_docx.styles.latent import LatentStyles
+from power_docx.styles.style import BaseStyle
+from power_docx.styles.styles import Styles
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import call, class_mock, function_mock, instance_mock, method_mock
@@ -378,7 +378,9 @@ class DescribeStyles:
 
     @pytest.fixture
     def LatentStyles_(self, request, latent_styles_):
-        return class_mock(request, "docx.styles.styles.LatentStyles", return_value=latent_styles_)
+        return class_mock(
+            request, "power_docx.styles.styles.LatentStyles", return_value=latent_styles_
+        )
 
     @pytest.fixture
     def latent_styles_(self, request):
@@ -390,7 +392,7 @@ class DescribeStyles:
 
     @pytest.fixture
     def StyleFactory_(self, request):
-        return function_mock(request, "docx.styles.styles.StyleFactory")
+        return function_mock(request, "power_docx.styles.styles.StyleFactory")
 
     @pytest.fixture
     def style_elm_(self, request):

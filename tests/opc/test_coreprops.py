@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the docx.opc.coreprops module."""
+"""Unit test suite for the power_docx.opc.coreprops module."""
 
 from __future__ import annotations
 
@@ -9,15 +9,15 @@ from typing import TYPE_CHECKING, cast
 
 import pytest
 
-from docx.opc.coreprops import CoreProperties
-from docx.oxml.parser import parse_xml
+from power_docx.opc.coreprops import CoreProperties
+from power_docx.oxml.parser import parse_xml
 
 if TYPE_CHECKING:
-    from docx.oxml.coreprops import CT_CoreProperties
+    from power_docx.oxml.coreprops import CT_CoreProperties
 
 
 class DescribeCoreProperties:
-    """Unit-test suite for `docx.opc.coreprops.CoreProperties` objects."""
+    """Unit-test suite for `power_docx.opc.coreprops.CoreProperties` objects."""
 
     @pytest.mark.parametrize(
         ("prop_name", "expected_value"),

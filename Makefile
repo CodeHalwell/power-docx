@@ -37,7 +37,7 @@ cleandocs:
 	$(MAKE) -C docs clean
 
 coverage:
-	uv run pytest --cov-report term-missing --cov=docx tests/
+	uv run pytest --cov-report term-missing --cov=power_docx tests/
 
 docs:
 	$(MAKE) -C docs html

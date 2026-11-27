@@ -1,4 +1,4 @@
-"""Test suite for the docx.oxml.parts module."""
+"""Test suite for the power_docx.oxml.parts module."""
 
 import pytest
 

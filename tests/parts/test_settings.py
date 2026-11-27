@@ -1,13 +1,13 @@
-"""Unit test suite for the docx.parts.settings module"""
+"""Unit test suite for the power_docx.parts.settings module"""
 
 import pytest
 
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.package import OpcPackage
-from docx.opc.part import PartFactory
-from docx.package import Package
-from docx.parts.settings import SettingsPart
-from docx.settings import Settings
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.opc.package import OpcPackage
+from power_docx.opc.part import PartFactory
+from power_docx.package import Package
+from power_docx.parts.settings import SettingsPart
+from power_docx.settings import Settings
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import class_mock, instance_mock, method_mock
@@ -59,7 +59,7 @@ class DescribeSettingsPart:
 
     @pytest.fixture
     def Settings_(self, request, settings_):
-        return class_mock(request, "docx.parts.settings.Settings", return_value=settings_)
+        return class_mock(request, "power_docx.parts.settings.Settings", return_value=settings_)
 
     @pytest.fixture
     def settings_(self, request):

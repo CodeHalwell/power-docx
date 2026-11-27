@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit-test suite for the `docx.dml.color` module."""
+"""Unit-test suite for the `power_docx.dml.color` module."""
 
 from __future__ import annotations
 
@@ -8,16 +8,16 @@ from typing import cast
 
 import pytest
 
-from docx.dml.color import ColorFormat
-from docx.enum.dml import MSO_COLOR_TYPE, MSO_THEME_COLOR
-from docx.oxml.text.run import CT_R
-from docx.shared import RGBColor
+from power_docx.dml.color import ColorFormat
+from power_docx.enum.dml import MSO_COLOR_TYPE, MSO_THEME_COLOR
+from power_docx.oxml.text.run import CT_R
+from power_docx.shared import RGBColor
 
 from ..unitutil.cxml import element, xml
 
 
 class DescribeColorFormat:
-    """Unit-test suite for `docx.dml.color.ColorFormat` objects."""
+    """Unit-test suite for `power_docx.dml.color.ColorFormat` objects."""
 
     @pytest.mark.parametrize(
         ("r_cxml", "expected_value"),

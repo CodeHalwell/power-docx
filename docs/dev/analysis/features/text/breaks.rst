@@ -30,13 +30,13 @@ break::
 
     >>> run.add_break()  # by default adds WD_BREAK.LINE
     >>> run.breaks
-    [<docx.text.Break object at 0x10a7c4f50>]
+    [<power_docx.text.Break object at 0x10a7c4f50>]
     >>> run.breaks[0].type.__name__
     WD_BREAK.LINE
 
     >>> run.add_break(WD_BREAK.LINE)
     >>> run.breaks
-    [<docx.text.Break object at 0x10a7c4f50>, <docx.text.Break object at 0x10a7c4f58>]
+    [<power_docx.text.Break object at 0x10a7c4f50>, <power_docx.text.Break object at 0x10a7c4f58>]
 
     >>> run.add_break(WD_BREAK.PAGE)
     >>> run.add_break(WD_BREAK.COLUMN)

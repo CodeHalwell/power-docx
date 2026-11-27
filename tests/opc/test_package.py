@@ -1,19 +1,19 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for docx.opc.package module"""
+"""Unit test suite for power_docx.opc.package module"""
 
 from __future__ import annotations
 
 import pytest
 
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.coreprops import CoreProperties
-from docx.opc.package import OpcPackage, Unmarshaller
-from docx.opc.packuri import PACKAGE_URI, PackURI
-from docx.opc.part import Part
-from docx.opc.parts.coreprops import CorePropertiesPart
-from docx.opc.pkgreader import PackageReader
-from docx.opc.rel import Relationships, _Relationship
+from power_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from power_docx.opc.coreprops import CoreProperties
+from power_docx.opc.package import OpcPackage, Unmarshaller
+from power_docx.opc.packuri import PACKAGE_URI, PackURI
+from power_docx.opc.part import Part
+from power_docx.opc.parts.coreprops import CorePropertiesPart
+from power_docx.opc.pkgreader import PackageReader
+from power_docx.opc.rel import Relationships, _Relationship
 
 from ..unitutil.mock import (
     FixtureRequest,
@@ -29,7 +29,7 @@ from ..unitutil.mock import (
 
 
 class DescribeOpcPackage:
-    """Unit-test suite for `docx.opc.package.OpcPackage` objects."""
+    """Unit-test suite for `power_docx.opc.package.OpcPackage` objects."""
 
     def it_can_open_a_pkg_file(self, PackageReader_, PartFactory_, Unmarshaller_):
         # mockery ----------------------
@@ -191,7 +191,7 @@ class DescribeOpcPackage:
 
     @pytest.fixture
     def CorePropertiesPart_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.CorePropertiesPart")
+        return class_mock(request, "power_docx.opc.package.CorePropertiesPart")
 
     @pytest.fixture
     def core_properties_(self, request: FixtureRequest):
@@ -211,11 +211,11 @@ class DescribeOpcPackage:
 
     @pytest.fixture
     def PackageReader_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.PackageReader")
+        return class_mock(request, "power_docx.opc.package.PackageReader")
 
     @pytest.fixture
     def PackURI_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.PackURI")
+        return class_mock(request, "power_docx.opc.package.PackURI")
 
     @pytest.fixture
     def packuri_(self, request: FixtureRequest):
@@ -223,11 +223,11 @@ class DescribeOpcPackage:
 
     @pytest.fixture
     def PackageWriter_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.PackageWriter")
+        return class_mock(request, "power_docx.opc.package.PackageWriter")
 
     @pytest.fixture
     def PartFactory_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.PartFactory")
+        return class_mock(request, "power_docx.opc.package.PartFactory")
 
     @pytest.fixture
     def part_(self, request: FixtureRequest):
@@ -253,7 +253,7 @@ class DescribeOpcPackage:
 
     @pytest.fixture
     def Relationships_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.Relationships")
+        return class_mock(request, "power_docx.opc.package.Relationships")
 
     @pytest.fixture
     def rel_(self, request: FixtureRequest):
@@ -273,7 +273,7 @@ class DescribeOpcPackage:
 
     @pytest.fixture
     def Unmarshaller_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.package.Unmarshaller")
+        return class_mock(request, "power_docx.opc.package.Unmarshaller")
 
 
 class DescribeUnmarshaller:

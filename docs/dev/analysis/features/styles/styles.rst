@@ -10,7 +10,7 @@ Access::
 
     >>> styles = document.styles  # default styles part added if not present
     >>> styles
-    <docx.styles.styles.Styles object at 0x1045dd550>
+    <power_docx.styles.styles.Styles object at 0x1045dd550>
 
 Iteration and length::
 
@@ -23,7 +23,7 @@ Iteration and length::
 Access style by name (or style id)::
 
     >>> styles['Normal']
-    <docx.styles.style._ParagraphStyle object at 0x1045dd550>
+    <power_docx.styles.style._ParagraphStyle object at 0x1045dd550>
 
     >>> styles['undefined-style']
     KeyError: no style with id or name 'undefined-style'

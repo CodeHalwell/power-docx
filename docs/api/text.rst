@@ -8,56 +8,56 @@ Text-related objects
 |Paragraph| objects
 -------------------
 
-.. autoclass:: docx.text.paragraph.Paragraph()
+.. autoclass:: power_docx.text.paragraph.Paragraph()
    :members:
 
 
 |ParagraphFormat| objects
 -------------------------
 
-.. autoclass:: docx.text.parfmt.ParagraphFormat()
+.. autoclass:: power_docx.text.parfmt.ParagraphFormat()
    :members:
 
 
 |Hyperlink| objects
 -------------------
 
-.. autoclass:: docx.text.hyperlink.Hyperlink()
+.. autoclass:: power_docx.text.hyperlink.Hyperlink()
    :members:
 
 
 |Run| objects
 -------------
 
-.. autoclass:: docx.text.run.Run()
+.. autoclass:: power_docx.text.run.Run()
    :members:
 
 
 |Font| objects
 --------------
 
-.. autoclass:: docx.text.run.Font()
+.. autoclass:: power_docx.text.run.Font()
    :members:
 
 
 |RenderedPageBreak| objects
 ---------------------------
 
-.. autoclass:: docx.text.pagebreak.RenderedPageBreak()
+.. autoclass:: power_docx.text.pagebreak.RenderedPageBreak()
    :members:
 
 
 |TabStop| objects
 -----------------
 
-.. autoclass:: docx.text.tabstops.TabStop()
+.. autoclass:: power_docx.text.tabstops.TabStop()
    :members:
 
 
 |TabStops| objects
 ------------------
 
-.. autoclass:: docx.text.tabstops.TabStops()
+.. autoclass:: power_docx.text.tabstops.TabStops()
    :members: clear_all
 
-   .. automethod:: docx.text.tabstops.TabStops.add_tab_stop(position, alignment=WD_TAB_ALIGNMENT.LEFT, leader=WD_TAB_LEADER.SPACES)
+   .. automethod:: power_docx.text.tabstops.TabStops.add_tab_stop(position, alignment=WD_TAB_ALIGNMENT.LEFT, leader=WD_TAB_LEADER.SPACES)

@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.opc.parts.coreprops module."""
+"""Unit test suite for the power_docx.opc.parts.coreprops module."""
 
 from __future__ import annotations
 
@@ -6,17 +6,17 @@ import datetime as dt
 
 import pytest
 
-from docx.opc.coreprops import CoreProperties
-from docx.opc.package import OpcPackage
-from docx.opc.packuri import PackURI
-from docx.opc.parts.coreprops import CorePropertiesPart
+from power_docx.opc.coreprops import CoreProperties
+from power_docx.opc.package import OpcPackage
+from power_docx.opc.packuri import PackURI
+from power_docx.opc.parts.coreprops import CorePropertiesPart
 
 from ...unitutil.cxml import element
 from ...unitutil.mock import FixtureRequest, Mock, class_mock, instance_mock
 
 
 class DescribeCorePropertiesPart:
-    """Unit-test suite for `docx.opc.parts.coreprops.CorePropertiesPart` objects."""
+    """Unit-test suite for `power_docx.opc.parts.coreprops.CorePropertiesPart` objects."""
 
     def it_provides_access_to_its_core_props_object(self, CoreProperties_: Mock, package_: Mock):
         core_properties_part = CorePropertiesPart(
@@ -46,7 +46,7 @@ class DescribeCorePropertiesPart:
 
     @pytest.fixture
     def CoreProperties_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.parts.coreprops.CoreProperties")
+        return class_mock(request, "power_docx.opc.parts.coreprops.CoreProperties")
 
     @pytest.fixture
     def package_(self, request: FixtureRequest):

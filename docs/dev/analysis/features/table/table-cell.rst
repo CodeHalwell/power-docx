@@ -12,10 +12,10 @@ Candidate protocol
 
 Cell.vertical_alignment::
 
-    >>> from docx.enum.table import WD_CELL_ALIGN_VERTICAL
+    >>> from power_docx.enum.table import WD_CELL_ALIGN_VERTICAL
     >>> cell = table.add_row().cells[0]
     >>> cell
-    <docx.table._Cell object at 0x...>
+    <power_docx.table._Cell object at 0x...>
     >>> cell.vertical_alignment
     None
     >>> cell.vertical_alignment = WD_CELL_ALIGN_VERTICAL.CENTER

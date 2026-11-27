@@ -5,12 +5,12 @@ Feature: Open a document
 
 
   Scenario: Open a specified document
-    Given I have python-docx installed
-     When I call docx.Document() with the path of a .docx file
+    Given I have power-docx installed
+     When I call power_docx.Document() with the path of a .docx file
      Then document is a Document object
 
 
   Scenario: Open the default document
-    Given I have python-docx installed
-     When I call docx.Document() with no arguments
+    Given I have power-docx installed
+     When I call power_docx.Document() with no arguments
      Then document is a Document object

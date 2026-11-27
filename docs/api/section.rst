@@ -11,7 +11,7 @@ Provides access to section properties such as margins and page orientation.
 |Sections| objects
 ------------------
 
-.. currentmodule:: docx.section
+.. currentmodule:: power_docx.section
 
 .. autoclass:: Sections
    :members:

@@ -1,10 +1,10 @@
-"""Test suite for the docx.text.tabstops module."""
+"""Test suite for the power_docx.text.tabstops module."""
 
 import pytest
 
-from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
-from docx.shared import Twips
-from docx.text.tabstops import TabStop, TabStops
+from power_docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+from power_docx.shared import Twips
+from power_docx.text.tabstops import TabStop, TabStops
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import call, class_mock, instance_mock
@@ -322,7 +322,7 @@ class DescribeTabStops:
 
     @pytest.fixture
     def TabStop_(self, request, tab_stop_):
-        return class_mock(request, "docx.text.tabstops.TabStop", return_value=tab_stop_)
+        return class_mock(request, "power_docx.text.tabstops.TabStop", return_value=tab_stop_)
 
     @pytest.fixture
     def tab_stop_(self, request):

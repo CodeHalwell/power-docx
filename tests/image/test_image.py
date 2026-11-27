@@ -1,18 +1,18 @@
-"""Unit test suite for docx.image package"""
+"""Unit test suite for power_docx.image package"""
 
 import io
 
 import pytest
 
-from docx.image.bmp import Bmp
-from docx.image.exceptions import UnrecognizedImageError
-from docx.image.gif import Gif
-from docx.image.image import BaseImageHeader, Image, _ImageHeaderFactory
-from docx.image.jpeg import Exif, Jfif
-from docx.image.png import Png
-from docx.image.tiff import Tiff
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.shared import Emu, Length
+from power_docx.image.bmp import Bmp
+from power_docx.image.exceptions import UnrecognizedImageError
+from power_docx.image.gif import Gif
+from power_docx.image.image import BaseImageHeader, Image, _ImageHeaderFactory
+from power_docx.image.jpeg import Exif, Jfif
+from power_docx.image.png import Png
+from power_docx.image.tiff import Tiff
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.shared import Emu, Length
 
 from ..unitutil.file import test_file
 from ..unitutil.mock import (
@@ -221,7 +221,7 @@ class DescribeImage:
 
     @pytest.fixture
     def BytesIO_(self, request, stream_):
-        return class_mock(request, "docx.image.image.io.BytesIO", return_value=stream_)
+        return class_mock(request, "power_docx.image.image.io.BytesIO", return_value=stream_)
 
     @pytest.fixture
     def filename_(self, request):
@@ -242,7 +242,7 @@ class DescribeImage:
     @pytest.fixture
     def _ImageHeaderFactory_(self, request, image_header_):
         return function_mock(
-            request, "docx.image.image._ImageHeaderFactory", return_value=image_header_
+            request, "power_docx.image.image._ImageHeaderFactory", return_value=image_header_
         )
 
     @pytest.fixture

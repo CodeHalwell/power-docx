@@ -1,21 +1,21 @@
-"""Test suite for the docx.text.hyperlink module."""
+"""Test suite for the power_docx.text.hyperlink module."""
 
 from typing import cast
 
 import pytest
 
-from docx import types as t
-from docx.opc.rel import _Relationship  # pyright: ignore[reportPrivateUsage]
-from docx.oxml.text.hyperlink import CT_Hyperlink
-from docx.parts.story import StoryPart
-from docx.text.hyperlink import Hyperlink
+from power_docx import types as t
+from power_docx.opc.rel import _Relationship  # pyright: ignore[reportPrivateUsage]
+from power_docx.oxml.text.hyperlink import CT_Hyperlink
+from power_docx.parts.story import StoryPart
+from power_docx.text.hyperlink import Hyperlink
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import FixtureRequest, Mock, instance_mock
 
 
 class DescribeHyperlink:
-    """Unit-test suite for the docx.text.hyperlink.Hyperlink object."""
+    """Unit-test suite for the power_docx.text.hyperlink.Hyperlink object."""
 
     @pytest.mark.parametrize(
         ("hlink_cxml", "expected_value"),

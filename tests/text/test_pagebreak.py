@@ -1,20 +1,20 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit-test suite for the docx.text.pagebreak module."""
+"""Unit-test suite for the power_docx.text.pagebreak module."""
 
 from typing import cast
 
 import pytest
 
-from docx import types as t
-from docx.oxml.text.paragraph import CT_P
-from docx.text.pagebreak import RenderedPageBreak
+from power_docx import types as t
+from power_docx.oxml.text.paragraph import CT_P
+from power_docx.text.pagebreak import RenderedPageBreak
 
 from ..unitutil.cxml import element, xml
 
 
 class DescribeRenderedPageBreak:
-    """Unit-test suite for the docx.text.pagebreak.RenderedPageBreak object."""
+    """Unit-test suite for the power_docx.text.pagebreak.RenderedPageBreak object."""
 
     def it_raises_on_preceding_fragment_when_page_break_is_not_first_in_paragrah(
         self, fake_parent: t.ProvidesStoryPart

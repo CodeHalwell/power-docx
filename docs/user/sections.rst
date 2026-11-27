@@ -22,12 +22,12 @@ Access to document sections is provided by the ``sections`` property on the
     >>> document = Document()
     >>> sections = document.sections
     >>> sections
-    <docx.parts.document.Sections object at 0x1deadbeef>
+    <power_docx.parts.document.Sections object at 0x1deadbeef>
     >>> len(sections)
     3
     >>> section = sections[0]
     >>> section
-    <docx.section.Section object at 0x1deadbeef>
+    <power_docx.section.Section object at 0x1deadbeef>
     >>> for section in sections:
     ...     print(section.start_type)
     ...
@@ -45,7 +45,7 @@ possibility using a ``len()`` check or ``try`` block to avoid an uncaught
 Adding a new section
 --------------------
 
-.. currentmodule:: docx.api
+.. currentmodule:: power_docx.api
 
 The :meth:`Document.add_section` method allows a new section to be started at
 the end of the document. Paragraphs and tables added after calling this method
@@ -62,7 +62,7 @@ will appear in the new section::
 Section properties
 ------------------
 
-.. currentmodule:: docx.section
+.. currentmodule:: power_docx.section
 
 The |Section| object has eleven properties that allow page layout settings to
 be discovered and specified.
@@ -106,7 +106,7 @@ Page margins
 Seven properties on |Section| together specify the various edge spacings that
 determine where text appears on the page::
 
-    >>> from docx.shared import Inches
+    >>> from power_docx.shared import Inches
     >>> section.left_margin, section.right_margin
     (1143000, 1143000)  # (Inches(1.25), Inches(1.25))
     >>> section.top_margin, section.bottom_margin

@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the `docx.comments` module."""
+"""Unit test suite for the `power_docx.comments` module."""
 
 from __future__ import annotations
 
@@ -9,20 +9,20 @@ from typing import cast
 
 import pytest
 
-from docx.comments import Comment, Comments
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.packuri import PackURI
-from docx.oxml.comments import CT_Comment, CT_Comments
-from docx.oxml.ns import qn
-from docx.package import Package
-from docx.parts.comments import CommentsPart
+from power_docx.comments import Comment, Comments
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.opc.packuri import PackURI
+from power_docx.oxml.comments import CT_Comment, CT_Comments
+from power_docx.oxml.ns import qn
+from power_docx.package import Package
+from power_docx.parts.comments import CommentsPart
 
 from .unitutil.cxml import element
 from .unitutil.mock import FixtureRequest, Mock, instance_mock
 
 
 class DescribeComments:
-    """Unit-test suite for `docx.comments.Comments` objects."""
+    """Unit-test suite for `power_docx.comments.Comments` objects."""
 
     @pytest.mark.parametrize(
         ("cxml", "count"),
@@ -180,7 +180,7 @@ class DescribeComments:
 
 
 class DescribeComment:
-    """Unit-test suite for `docx.comments.Comment`."""
+    """Unit-test suite for `power_docx.comments.Comment`."""
 
     def it_knows_its_comment_id(self, comments_part_: Mock):
         comment_elm = cast(CT_Comment, element("w:comment{w:id=42}"))

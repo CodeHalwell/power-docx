@@ -1,18 +1,18 @@
-"""Test suite for the docx.shared module."""
+"""Test suite for the power_docx.shared module."""
 
 from __future__ import annotations
 
 import pytest
 
-from docx.opc.part import XmlPart
-from docx.shared import Cm, ElementProxy, Emu, Inches, Length, Mm, Pt, RGBColor, Twips
+from power_docx.opc.part import XmlPart
+from power_docx.shared import Cm, ElementProxy, Emu, Inches, Length, Mm, Pt, RGBColor, Twips
 
 from .unitutil.cxml import element
 from .unitutil.mock import FixtureRequest, Mock, instance_mock
 
 
 class DescribeElementProxy:
-    """Unit-test suite for `docx.shared.ElementProxy` objects."""
+    """Unit-test suite for `power_docx.shared.ElementProxy` objects."""
 
     def it_knows_when_its_equal_to_another_proxy_object(self):
         p, q = element("w:p"), element("w:p")
@@ -51,7 +51,7 @@ class DescribeElementProxy:
 
 
 class DescribeLength:
-    """Unit-test suite for `docx.shared.Length` objects."""
+    """Unit-test suite for `power_docx.shared.Length` objects."""
 
     @pytest.mark.parametrize(
         ("UnitCls", "units_val", "emu"),
@@ -92,7 +92,7 @@ class DescribeLength:
 
 
 class DescribeRGBColor:
-    """Unit-test suite for `docx.shared.RGBColor` objects."""
+    """Unit-test suite for `power_docx.shared.RGBColor` objects."""
 
     def it_is_natively_constructed_using_three_ints_0_to_255(self):
         rgb_color = RGBColor(0x12, 0x34, 0x56)

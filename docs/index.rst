@@ -1,10 +1,10 @@
 
-python-docx
+power-docx
 ===========
 
 Release v\ |version| (:ref:`Installation <install>`)
 
-*python-docx* is a Python library for creating and updating Microsoft Word
+*power-docx* is a Python library for creating and updating Microsoft Word
 (.docx) files.
 
 
@@ -18,8 +18,8 @@ Here's an example of what |docx| can do:
 ============================================  ===============================================================
 |img|                                         ::
 
-                                                from docx import Document
-                                                from docx.shared import Inches
+                                                from power_docx import Document
+                                                from power_docx.shared import Inches
 
                                                 document = Document()
 

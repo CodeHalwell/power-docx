@@ -1,11 +1,11 @@
-"""Test suite for docx.text.parfmt module, containing the ParagraphFormat object."""
+"""Test suite for power_docx.text.parfmt module, containing the ParagraphFormat object."""
 
 import pytest
 
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
-from docx.shared import Pt
-from docx.text.parfmt import ParagraphFormat
-from docx.text.tabstops import TabStops
+from power_docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
+from power_docx.shared import Pt
+from power_docx.text.parfmt import ParagraphFormat
+from power_docx.text.tabstops import TabStops
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import class_mock, instance_mock
@@ -479,7 +479,7 @@ class DescribeParagraphFormat:
 
     @pytest.fixture
     def TabStops_(self, request, tab_stops_):
-        return class_mock(request, "docx.text.parfmt.TabStops", return_value=tab_stops_)
+        return class_mock(request, "power_docx.text.parfmt.TabStops", return_value=tab_stops_)
 
     @pytest.fixture
     def tab_stops_(self, request):
