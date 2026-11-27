@@ -58,6 +58,7 @@ src/power_docx/        # the library (importable package)
   parts/               # package parts (document, styles, numbering, image, ...)
   enum/                # WD_* enumerations
   image/               # image characterization (PNG/JPEG/GIF/BMP/TIFF)
+  skill/               # bundled coding-agent skill (SKILL.md + references/ + CLI)
   templates/           # default.docx used by Document()
 
 tests/                 # pytest unit tests, mirroring the src module layout
@@ -92,7 +93,7 @@ uv run pyright                 # strict mode, configured in pyproject.toml --
 ```
 
 - pytest discovers test classes named `Test`/`Describe` and functions prefixed
-  `test_`/`it_`/`its_`/`they_`/`and_`/`but_` (see `[tool.pytest.ini_options]` in
+  `it_`/`its_`/`they_`/`and_`/`but_` (see `[tool.pytest.ini_options]` in
   `pyproject.toml`). `filterwarnings = ["error"]` — warnings fail the suite.
 - `behave` runs from the repo root; scratch output goes to `features/_scratch/`.
 
@@ -126,8 +127,11 @@ it green via a scoped entry-point config first, the power-pptx pattern).
   an acceptance feature if the behavior is user-facing.
 - Update `HISTORY.rst` (unreleased section) for any user-visible change.
 - If you change the library's public usage surface, update the bundled skill
-  under `src/power_docx/skill/` **and** the mirror under `.claude/skills/`
-  (both land in ROADMAP Phase 1; keep the two copies in sync from then on).
+  under `src/power_docx/skill/` **and** refresh the mirror under
+  `.claude/skills/power-docx/` (run
+  `uv run power-docx-skill install .claude/skills/power-docx`). Both copies
+  must stay byte-identical (enforced by `tests/test_skill.py`), and every
+  Python code block in the skill is checked by `tests/test_skill_examples.py`.
 - The version is the `__version__` string in `src/power_docx/__init__.py`
   (setuptools reads it dynamically).
 

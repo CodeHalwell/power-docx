@@ -78,30 +78,31 @@ payoff; `[high/med]` = sizeable change, moderate payoff.
 
 Make the fork a well-run, agent-readable repository before adding features.
 
-- [ ] Rename distribution to `power-docx` and package to `power_docx`
+- [x] Rename distribution to `power-docx` and package to `power_docx`
   (side-by-side install with upstream `python-docx`). `[low/high]`
-- [ ] `AGENTS.md` + `CLAUDE.md` repo guidance for coding agents. `[low/high]`
-- [ ] `CONTRIBUTING.md`, PR template, commit-prefix and `HISTORY.rst`
+- [x] `AGENTS.md` + `CLAUDE.md` repo guidance for coding agents. `[low/high]`
+- [x] `CONTRIBUTING.md`, PR template, commit-prefix and `HISTORY.rst`
   conventions. `[low/med]`
-- [ ] GitHub Actions CI: pytest + behave matrix over Python 3.9–3.13, ruff,
-  pyright; drop legacy `.travis.yml`. `[med/high]`
-- [ ] This `ROADMAP.md`. `[low/med]`
+- [x] GitHub Actions CI: pytest + behave matrix over Python 3.9–3.13, ruff;
+  drop legacy `.travis.yml` (`pyright` strict gating tracked in Phase 8).
+  `[med/high]`
+- [x] This `ROADMAP.md`. `[low/med]`
 
 ## Phase 1 — Bundled agent skill (target: 2.1.0)
 
 Ship the canonical usage guide *inside the package*, the power-pptx way.
 
-- [ ] `src/power_docx/skill/` with `SKILL.md` (cheat sheet, house rules,
+- [x] `src/power_docx/skill/` with `SKILL.md` (cheat sheet, house rules,
   anti-patterns, pitfalls) and `references/` per topic: documents/sections,
   styles, tables, text, headers/footers, comments, images, page-aware layout.
   `[med/high]`
-- [ ] Packaging: `package-data` so the wheel ships the skill; a
+- [x] Packaging: `package-data` so the wheel ships the skill; a
   `power-docx-skill` console script; `python -m power_docx.skill install`
   copying into `~/.claude/skills/power-docx` with refuse-to-clobber guards.
   `[low/high]`
-- [ ] Mirrored `.claude/skills/power-docx/` copy with a keep-in-sync rule in
+- [x] Mirrored `.claude/skills/power-docx/` copy with a keep-in-sync rule in
   `AGENTS.md`. `[low/med]`
-- [ ] "Coding agents" page in the user docs. `[low/med]`
+- [x] "Coding agents" page in the user docs. `[low/med]`
 
 ## Phase 2 — Page and geometry model (target: 2.2.0)
 

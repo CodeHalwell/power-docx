@@ -12,6 +12,11 @@ Unreleased
 - Add ``ROADMAP.md``, agent guidance (``AGENTS.md``/``CLAUDE.md``), a
   contribution guide, a pull-request template, and GitHub Actions CI;
   remove the legacy ``.travis.yml``.
+- Ship a bundled coding-agent skill under ``src/power_docx/skill/``
+  (``SKILL.md`` + 8 topic guides under ``references/``), mirrored at
+  ``.claude/skills/power-docx/``, with ``power_docx.skill.install_skill()`` /
+  ``skill_root()``, ``python -m power_docx.skill`` / ``power-docx-skill`` CLI
+  (with refuse-to-clobber guards), and a ``Coding agents`` user guide.
 
 
 1.2.0 (2025-06-16)

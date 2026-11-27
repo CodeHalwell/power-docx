@@ -83,6 +83,7 @@ User Guide
    user/styles-using
    user/comments
    user/shapes
+   user/agents
 
 
 API Documentation
