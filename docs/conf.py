@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# python-docx documentation build configuration file, created by
+# power-docx documentation build configuration file, created by
 # sphinx-quickstart on Sat Jun 29 17:34:36 2013.
 #
 # This file is execfile()d with the current directory set to its containing
@@ -20,7 +20,7 @@ import sys
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath(".."))
 
-from docx import __version__  # noqa
+from power_docx import __version__  # noqa
 
 
 # -- General configuration ---------------------------------------------------
@@ -51,7 +51,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "python-docx"
+project = "power-docx"
 copyright = "2013, Steve Canny"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -67,7 +67,7 @@ release = __version__
 # file that is read. This is the right place to add substitutions that should
 # be available in every file.
 rst_epilog = """
-.. |api-Document| replace:: :class:`docx.api.Document`
+.. |api-Document| replace:: :class:`power_docx.api.Document`
 
 .. |AttributeError| replace:: :exc:`.AttributeError`
 
@@ -103,7 +103,7 @@ rst_epilog = """
 
 .. |DocumentPart| replace:: :class:`.DocumentPart`
 
-.. |docx| replace:: ``python-docx``
+.. |docx| replace:: ``power-docx``
 
 .. |Emu| replace:: :class:`.Emu`
 
@@ -307,7 +307,7 @@ html_sidebars = {"**": ["localtoc.html", "relations.html", "sidebarlinks.html", 
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "python-docxdoc"
+htmlhelp_basename = "power-docxdoc"
 
 
 # -- Options for LaTeX output -----------------------------------------------
@@ -328,7 +328,7 @@ latex_elements = {
 #  author,
 #  documentclass [howto/manual]).
 latex_documents = [
-    ("index", "python-docx.tex", "python-docx Documentation", "Steve Canny", "manual"),
+    ("index", "power-docx.tex", "power-docx Documentation", "Steve Canny", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -356,7 +356,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [("index", "python-docx", "python-docx Documentation", ["Steve Canny"], 1)]
+man_pages = [("index", "power-docx", "power-docx Documentation", ["Steve Canny"], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -370,10 +370,10 @@ man_pages = [("index", "python-docx", "python-docx Documentation", ["Steve Canny
 texinfo_documents = [
     (
         "index",
-        "python-docx",
-        "python-docx Documentation",
+        "power-docx",
+        "power-docx Documentation",
         "Steve Canny",
-        "python-docx",
+        "power-docx",
         "One line description of project.",
         "Miscellaneous",
     ),

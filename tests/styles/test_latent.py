@@ -1,8 +1,8 @@
-"""Unit test suite for the docx.styles.latent module."""
+"""Unit test suite for the power_docx.styles.latent module."""
 
 import pytest
 
-from docx.styles.latent import LatentStyles, _LatentStyle
+from power_docx.styles.latent import LatentStyles, _LatentStyle
 
 from ..unitutil.cxml import element, xml
 

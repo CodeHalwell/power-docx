@@ -84,7 +84,7 @@ Adding a Comment
 
 A simple example is adding a comment to a paragraph::
 
-    >>> from docx import Document
+    >>> from power_docx import Document
     >>> document = Document()
     >>> paragraph = document.add_paragraph("Hello, world!")
 
@@ -95,7 +95,7 @@ A simple example is adding a comment to a paragraph::
     ...    initials="SC",
     ... )
     >>> comment
-    <docx.comments.Comment object at 0x02468ACE>
+    <power_docx.comments.Comment object at 0x02468ACE>
     >>> comment.id
     0
     >>> comment.author
@@ -117,7 +117,7 @@ The comments collection is accessed via the :attr:`.Document.comments` property:
 
     >>> comments = document.comments
     >>> comments
-    <docx.parts.comments.Comments object at 0x02468ACE>
+    <power_docx.parts.comments.Comments object at 0x02468ACE>
     >>> len(comments)
     1
 
@@ -125,7 +125,7 @@ The comments collection supports random access to a comment by its id::
 
     >>> comment = comments.get(0)
     >>> comment
-    <docx.comments.Comment object at 0x02468ACE>
+    <power_docx.comments.Comment object at 0x02468ACE>
 
 
 Adding rich content to a comment

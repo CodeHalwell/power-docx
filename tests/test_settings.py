@@ -1,18 +1,18 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the docx.settings module."""
+"""Unit test suite for the power_docx.settings module."""
 
 from __future__ import annotations
 
 import pytest
 
-from docx.settings import Settings
+from power_docx.settings import Settings
 
 from .unitutil.cxml import element, xml
 
 
 class DescribeSettings:
-    """Unit-test suite for the `docx.settings.Settings` objects."""
+    """Unit-test suite for the `power_docx.settings.Settings` objects."""
 
     @pytest.mark.parametrize(
         ("cxml", "expected_value"),

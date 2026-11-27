@@ -11,19 +11,19 @@ depends on what installation utilities you have installed.
 
 |docx| may be installed with ``pip`` if you have it available::
 
-    pip install python-docx
+    pip install power-docx
 
 |docx| can also be installed using ``easy_install``, although this is
 discouraged::
 
-    easy_install python-docx
+    easy_install power-docx
 
 If neither ``pip`` nor ``easy_install`` is available, it can be installed
 manually by downloading the distribution from PyPI, unpacking the tarball,
 and running ``setup.py``::
 
-    tar xvzf python-docx-{version}.tar.gz
-    cd python-docx-{version}
+    tar xvzf power-docx-{version}.tar.gz
+    cd power-docx-{version}
     python setup.py install
 
 |docx| depends on the ``lxml`` package. Both ``pip`` and ``easy_install``

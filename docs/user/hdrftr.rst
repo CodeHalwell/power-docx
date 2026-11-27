@@ -31,7 +31,7 @@ for that section::
     >>> section = document.sections[0]
     >>> header = section.header
     >>> header
-    <docx.section._Header object at 0x...>
+    <power_docx.section._Header object at 0x...>
 
 A |_Header| object is `always` present on ``Section.header``, even when no header is
 defined for that section. The presence of an actual header definition is indicated by

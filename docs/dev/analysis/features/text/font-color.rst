@@ -27,10 +27,10 @@ There are three historical sources to draw from for this API.
 Candidate Protocol
 ~~~~~~~~~~~~~~~~~~
 
-:class:`docx.text.run.Run` has a font property::
+:class:`power_docx.text.run.Run` has a font property::
 
-    >>> from docx import Document
-    >>> from docx.text.run import Font, Run
+    >>> from power_docx import Document
+    >>> from power_docx.text.run import Font, Run
     >>> run = Document().add_paragraph().add_run()
     >>> isinstance(run, Run)
     True
@@ -38,10 +38,10 @@ Candidate Protocol
     >>> isinstance(font, Font)
     True
 
-:class:`docx.text.run.Font` has a read-only color property, returning
-a :class:`docx.dml.color.ColorFormat` object::
+:class:`power_docx.text.run.Font` has a read-only color property, returning
+a :class:`power_docx.dml.color.ColorFormat` object::
 
-    >>> from docx.dml.color import ColorFormat
+    >>> from power_docx.dml.color import ColorFormat
     >>> color = font.color
     >>> isinstance(font.color, ColorFormat)
     True
@@ -49,7 +49,7 @@ a :class:`docx.dml.color.ColorFormat` object::
     AttributeError: can't set attribute
 
 
-:class:`docx.dml.color.ColorFormat` has a read-only :attr:`type` property and
+:class:`power_docx.dml.color.ColorFormat` has a read-only :attr:`type` property and
 read/write :attr:`rgb`, :attr:`theme_color`, and :attr:`brightness`
 properties.
 

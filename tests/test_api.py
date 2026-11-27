@@ -1,16 +1,16 @@
-"""Test suite for the docx.api module."""
+"""Test suite for the power_docx.api module."""
 
 import pytest
 
-from docx.api import Document as DocumentFactoryFn
-from docx.document import Document as DocumentCls
-from docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.api import Document as DocumentFactoryFn
+from power_docx.document import Document as DocumentCls
+from power_docx.opc.constants import CONTENT_TYPE as CT
 
 from .unitutil.mock import FixtureRequest, Mock, class_mock, function_mock, instance_mock
 
 
 class DescribeDocument:
-    """Unit-test suite for `docx.api.Document` factory function."""
+    """Unit-test suite for `power_docx.api.Document` factory function."""
 
     def it_opens_a_docx_file(self, Package_: Mock, document_: Mock):
         document_part = Package_.open.return_value.main_document_part
@@ -45,7 +45,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def _default_docx_path_(self, request: FixtureRequest):
-        return function_mock(request, "docx.api._default_docx_path")
+        return function_mock(request, "power_docx.api._default_docx_path")
 
     @pytest.fixture
     def document_(self, request: FixtureRequest):
@@ -53,4 +53,4 @@ class DescribeDocument:
 
     @pytest.fixture
     def Package_(self, request: FixtureRequest):
-        return class_mock(request, "docx.api.Package")
+        return class_mock(request, "power_docx.api.Package")

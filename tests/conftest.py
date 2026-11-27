@@ -7,8 +7,8 @@ from typing import TYPE_CHECKING
 import pytest
 
 if TYPE_CHECKING:
-    from docx import types as t
-    from docx.parts.story import StoryPart
+    from power_docx import types as t
+    from power_docx.parts.story import StoryPart
 
 
 @pytest.fixture

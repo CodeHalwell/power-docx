@@ -1,11 +1,11 @@
-"""Test suite for the docx.oxml.text.hyperlink module."""
+"""Test suite for the power_docx.oxml.text.hyperlink module."""
 
 from typing import cast
 
 import pytest
 
-from docx.oxml.text.hyperlink import CT_Hyperlink
-from docx.oxml.text.run import CT_R
+from power_docx.oxml.text.hyperlink import CT_Hyperlink
+from power_docx.oxml.text.run import CT_R
 
 from ...unitutil.cxml import element
 

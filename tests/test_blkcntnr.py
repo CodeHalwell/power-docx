@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.blkcntnr (block item container) module."""
+"""Test suite for the power_docx.blkcntnr (block item container) module."""
 
 from __future__ import annotations
 
@@ -8,13 +8,13 @@ from typing import cast
 
 import pytest
 
-import docx
-from docx.blkcntnr import BlockItemContainer
-from docx.document import Document
-from docx.oxml.document import CT_Body
-from docx.shared import Inches
-from docx.table import Table
-from docx.text.paragraph import Paragraph
+import power_docx
+from power_docx.blkcntnr import BlockItemContainer
+from power_docx.document import Document
+from power_docx.oxml.document import CT_Body
+from power_docx.shared import Inches
+from power_docx.table import Table
+from power_docx.text.paragraph import Paragraph
 
 from .unitutil.cxml import element, xml
 from .unitutil.file import snippet_seq, test_file
@@ -22,7 +22,7 @@ from .unitutil.mock import FixtureRequest, Mock, call, instance_mock, method_moc
 
 
 class DescribeBlockItemContainer:
-    """Unit-test suite for `docx.blkcntnr.BlockItemContainer`."""
+    """Unit-test suite for `power_docx.blkcntnr.BlockItemContainer`."""
 
     @pytest.mark.parametrize(
         ("text", "style"), [("", None), ("Foo", None), ("", "Bar"), ("Foo", "Bar")]
@@ -55,7 +55,7 @@ class DescribeBlockItemContainer:
         assert table._parent is blkcntnr
 
     def it_can_iterate_its_inner_content(self):
-        document = docx.Document(test_file("blk-inner-content.docx"))
+        document = power_docx.Document(test_file("blk-inner-content.docx"))
 
         inner_content = document.iter_inner_content()
 

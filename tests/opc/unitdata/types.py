@@ -1,6 +1,6 @@
 """XML test data builders for [Content_Types].xml elements."""
 
-from docx.opc.oxml import nsmap
+from power_docx.opc.oxml import nsmap
 
 from ...unitdata import BaseBuilder
 

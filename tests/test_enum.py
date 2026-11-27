@@ -1,4 +1,4 @@
-"""Test suite for docx.enum module, focused on base classes.
+"""Test suite for power_docx.enum module, focused on base classes.
 
 Configured a little differently because of the meta-programming, the two enumeration
 classes at the top constitute the entire fixture and the tests themselves just make
@@ -9,7 +9,7 @@ import enum
 
 import pytest
 
-from docx.enum.base import BaseXmlEnum
+from power_docx.enum.base import BaseXmlEnum
 
 
 class SomeXmlAttr(BaseXmlEnum):
@@ -26,7 +26,7 @@ class SomeXmlAttr(BaseXmlEnum):
 
 
 class DescribeBaseXmlEnum:
-    """Unit-test suite for `docx.enum.base.BaseXmlEnum`."""
+    """Unit-test suite for `power_docx.enum.base.BaseXmlEnum`."""
 
     def it_is_an_instance_of_EnumMeta_just_like_a_regular_Enum(self):
         assert type(SomeXmlAttr) is enum.EnumMeta
@@ -65,7 +65,7 @@ class DescribeBaseXmlEnum:
 
 
 class DescribeBaseXmlEnumMembers:
-    """Unit-test suite for `docx.enum.base.BaseXmlEnum`."""
+    """Unit-test suite for `power_docx.enum.base.BaseXmlEnum`."""
 
     def it_is_an_instance_of_its_XmlEnum_subtype_class(self):
         assert type(SomeXmlAttr.FOO) is SomeXmlAttr

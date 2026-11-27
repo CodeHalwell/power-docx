@@ -1,11 +1,11 @@
-"""Test suite for docx.image.helpers module."""
+"""Test suite for power_docx.image.helpers module."""
 
 import io
 
 import pytest
 
-from docx.image.exceptions import UnexpectedEndOfFileError
-from docx.image.helpers import BIG_ENDIAN, LITTLE_ENDIAN, StreamReader
+from power_docx.image.exceptions import UnexpectedEndOfFileError
+from power_docx.image.helpers import BIG_ENDIAN, LITTLE_ENDIAN, StreamReader
 
 
 class DescribeStreamReader:

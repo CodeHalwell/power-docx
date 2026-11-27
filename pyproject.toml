@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "python-docx"
+name = "power-docx"
 authors = [{name = "Steve Canny", email = "stcanny@gmail.com"}]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -49,13 +49,13 @@ dev = [
 ]
 
 [project.urls]
-Changelog = "https://github.com/python-openxml/python-docx/blob/master/HISTORY.rst"
-Documentation = "https://python-docx.readthedocs.org/en/latest/"
-Homepage = "https://github.com/python-openxml/python-docx"
-Repository = "https://github.com/python-openxml/python-docx"
+Changelog = "https://github.com/CodeHalwell/power-docx/blob/master/HISTORY.rst"
+Documentation = "https://codehalwell.github.io/power-docx/"
+Homepage = "https://github.com/CodeHalwell/power-docx"
+Repository = "https://github.com/CodeHalwell/power-docx"
 
 [tool.pyright]
-include = ["src/docx", "tests"]
+include = ["src/power_docx", "tests"]
 pythonPlatform = "All"
 pythonVersion = "3.9"
 reportImportCycles = false
@@ -81,7 +81,7 @@ filterwarnings = [
 looponfailroots = ["src", "tests"]
 norecursedirs = [
     "doc",
-    "docx",
+    "power_docx",
     "*.egg-info",
     "features",
     ".git",
@@ -119,9 +119,9 @@ select = [
 ]
 
 [tool.ruff.lint.isort]
-known-first-party = ["docx"]
+known-first-party = ["power_docx"]
 known-local-folder = ["helpers"]
 
 [tool.setuptools.dynamic]
-version = {attr = "docx.__version__"}
+version = {attr = "power_docx.__version__"}
 

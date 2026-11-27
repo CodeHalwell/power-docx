@@ -11,6 +11,6 @@ contexts.
 |ColorFormat| objects
 ---------------------
 
-.. autoclass:: docx.dml.color.ColorFormat()
+.. autoclass:: power_docx.dml.color.ColorFormat()
    :members:
    :undoc-members:

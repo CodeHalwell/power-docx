@@ -168,7 +168,7 @@ run in the range, where a single run can be both the start and end run::
     ...    author="Steve Canny",
     ...    initials="SC",
     ... )
-    <docx.comments.Comment object at 0x02468ACE>
+    <power_docx.comments.Comment object at 0x02468ACE>
 
 A single run can be provided when that is more convenient::
 
@@ -177,7 +177,7 @@ A single run can be provided when that is more convenient::
     >>> document.add_comment(
     ...     run, text="The AI model will replace this placeholder with a summary"
     ... )
-    <docx.comments.Comment object at 0x02468ACE>
+    <power_docx.comments.Comment object at 0x02468ACE>
 
 Note that `author` and `initials` are optional parameters; both default to the empty
 string.
@@ -194,7 +194,7 @@ you can immediately add runs to and add additional paragraphs after:
     >>> paragraph.add_run("AI model").bold = True
     >>> paragraph.add_run(" will replace this placeholder with a ")
     >>> paragraph.add_run("summary").bold = True
-    <docx.comments.Comment object at 0x02468ACE>
+    <power_docx.comments.Comment object at 0x02468ACE>
 
 A method directly on |Run| may also be convenient, since you will always have the first
 run of the range in hand when adding a comment but may not have ready access to the
@@ -205,7 +205,7 @@ run of the range in hand when adding a comment but may not have ready access to 
     ...     last_run=runs[-1],
     ...     text="The AI model will replace this placeholder with a summary",
     ... )
-    <docx.comments.Comment object at 0x02468ACE>
+    <power_docx.comments.Comment object at 0x02468ACE>
 
 However, in this situation we would need to qualify the runs as being inside the
 document part and not in a header or footer or comment, and perhaps other invalid

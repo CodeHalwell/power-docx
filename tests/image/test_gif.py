@@ -1,11 +1,11 @@
-"""Unit test suite for docx.image.gif module."""
+"""Unit test suite for power_docx.image.gif module."""
 
 import io
 
 import pytest
 
-from docx.image.constants import MIME_TYPE
-from docx.image.gif import Gif
+from power_docx.image.constants import MIME_TYPE
+from power_docx.image.gif import Gif
 
 from ..unitutil.mock import ANY, initializer_mock
 

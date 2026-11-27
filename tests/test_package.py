@@ -1,15 +1,15 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for docx.package module."""
+"""Unit test suite for power_docx.package module."""
 
 from __future__ import annotations
 
 import pytest
 
-from docx.image.image import Image
-from docx.opc.packuri import PackURI
-from docx.package import ImageParts, Package
-from docx.parts.image import ImagePart
+from power_docx.image.image import Image
+from power_docx.opc.packuri import PackURI
+from power_docx.package import ImageParts, Package
+from power_docx.parts.image import ImagePart
 
 from .unitutil.file import docx_path
 from .unitutil.mock import (
@@ -23,7 +23,7 @@ from .unitutil.mock import (
 
 
 class DescribePackage:
-    """Unit-test suite for `docx.package.Package`."""
+    """Unit-test suite for `power_docx.package.Package`."""
 
     def it_can_get_or_add_an_image_part_containing_a_specified_image(
         self, image_parts_prop_: Mock, image_parts_: Mock, image_part_: Mock
@@ -61,7 +61,7 @@ class DescribePackage:
 
 
 class DescribeImageParts:
-    """Unit-test suite for `docx.package.Package`."""
+    """Unit-test suite for `power_docx.package.Package`."""
 
     def it_can_get_a_matching_image_part(
         self,
@@ -156,7 +156,7 @@ class DescribeImageParts:
 
     @pytest.fixture
     def Image_(self, request: FixtureRequest):
-        return class_mock(request, "docx.package.Image")
+        return class_mock(request, "power_docx.package.Image")
 
     @pytest.fixture
     def image_(self, request: FixtureRequest):
@@ -164,7 +164,7 @@ class DescribeImageParts:
 
     @pytest.fixture
     def ImagePart_(self, request: FixtureRequest):
-        return class_mock(request, "docx.package.ImagePart")
+        return class_mock(request, "power_docx.package.ImagePart")
 
     @pytest.fixture
     def image_part_(self, request: FixtureRequest):

@@ -4,7 +4,7 @@
 Shape-related objects
 =====================
 
-.. currentmodule:: docx.shape
+.. currentmodule:: power_docx.shape
 
 
 |InlineShapes| objects

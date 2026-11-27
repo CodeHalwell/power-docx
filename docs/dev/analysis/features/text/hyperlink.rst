@@ -47,15 +47,15 @@ and addresses typed into the document directly don't, based on my limited experi
 **Access hyperlinks in a paragraph**::
 
     >>> hyperlinks = paragraph.hyperlinks
-    [<docx.text.hyperlink.Hyperlink at 0x7f...>]
+    [<power_docx.text.hyperlink.Hyperlink at 0x7f...>]
 
 **Access hyperlinks in a paragraph in document order with runs**::
 
     >>> list(paragraph.iter_inner_content())
     [
-      <docx.text.run.Run at 0x7f...>
-      <docx.text.hyperlink.Hyperlink at 0x7f...>
-      <docx.text.run.Run at 0x7f...>
+      <power_docx.text.run.Run at 0x7f...>
+      <power_docx.text.hyperlink.Hyperlink at 0x7f...>
+      <power_docx.text.run.Run at 0x7f...>
     ]
 
 **Access hyperlink address**::
@@ -77,9 +77,9 @@ and addresses typed into the document directly don't, based on my limited experi
 
     >>> hyperlink.runs
     [
-      <docx.text.run.Run at 0x7f...>
-      <docx.text.run.Run at 0x7f...>
-      <docx.text.run.Run at 0x7f...>
+      <power_docx.text.run.Run at 0x7f...>
+      <power_docx.text.run.Run at 0x7f...>
+      <power_docx.text.run.Run at 0x7f...>
     ]
 
 **Access hyperlink URL**::
@@ -103,7 +103,7 @@ and addresses typed into the document directly don't, based on my limited experi
     ...   'About', address='http://us.com', fragment='about'
     ... )
     >>> hyperlink
-    <docx.text.hyperlink.Hyperlink at 0x7f...>
+    <power_docx.text.hyperlink.Hyperlink at 0x7f...>
     >>> hyperlink.text
     'About'
     >>> hyperlink.address
@@ -144,16 +144,16 @@ and addresses typed into the document directly don't, based on my limited experi
     >>> hyperlink.text
     'A formatted link'
     >>> [r for r in hyperlink.iter_runs()]
-    [<docx.text.run.Run at 0x7fa...>,
-     <docx.text.run.Run at 0x7fb...>,
-     <docx.text.run.Run at 0x7fc...>]
+    [<power_docx.text.run.Run at 0x7fa...>,
+     <power_docx.text.run.Run at 0x7fb...>,
+     <power_docx.text.run.Run at 0x7fc...>]
 
 **Iterate over the run-level items a paragraph contains**::
 
     >>> paragraph = document.add_paragraph('A paragraph having a link to: ')
     >>> paragraph.add_hyperlink(text='github', address='http://github.com')
     >>> [item for item in paragraph.iter_run_level_items()]:
-    [<docx.text.paragraph.Run at 0x7fd...>, <docx.text.paragraph.Hyperlink at 0x7fe...>]
+    [<power_docx.text.paragraph.Run at 0x7fd...>, <power_docx.text.paragraph.Hyperlink at 0x7fe...>]
 
 **Paragraph.text now includes text contained in a hyperlink**::
 

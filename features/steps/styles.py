@@ -2,12 +2,12 @@
 
 from behave import given, then, when
 
-from docx import Document
-from docx.enum.style import WD_STYLE_TYPE
-from docx.styles.latent import LatentStyles, _LatentStyle
-from docx.styles.style import BaseStyle
-from docx.text.font import Font
-from docx.text.parfmt import ParagraphFormat
+from power_docx import Document
+from power_docx.enum.style import WD_STYLE_TYPE
+from power_docx.styles.latent import LatentStyles, _LatentStyle
+from power_docx.styles.style import BaseStyle
+from power_docx.text.font import Font
+from power_docx.text.parfmt import ParagraphFormat
 
 from helpers import bool_vals, test_docx, tri_state_vals
 

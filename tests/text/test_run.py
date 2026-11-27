@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.text.run module."""
+"""Test suite for the power_docx.text.run module."""
 
 from __future__ import annotations
 
@@ -8,23 +8,23 @@ from typing import Any, List, cast
 
 import pytest
 
-from docx import types as t
-from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.text import WD_BREAK, WD_UNDERLINE
-from docx.oxml.text.paragraph import CT_P
-from docx.oxml.text.run import CT_R
-from docx.parts.document import DocumentPart
-from docx.shape import InlineShape
-from docx.text.font import Font
-from docx.text.paragraph import Paragraph
-from docx.text.run import Run
+from power_docx import types as t
+from power_docx.enum.style import WD_STYLE_TYPE
+from power_docx.enum.text import WD_BREAK, WD_UNDERLINE
+from power_docx.oxml.text.paragraph import CT_P
+from power_docx.oxml.text.run import CT_R
+from power_docx.parts.document import DocumentPart
+from power_docx.shape import InlineShape
+from power_docx.text.font import Font
+from power_docx.text.paragraph import Paragraph
+from power_docx.text.run import Run
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import FixtureRequest, Mock, class_mock, instance_mock, property_mock
 
 
 class DescribeRun:
-    """Unit-test suite for `docx.text.run.Run`."""
+    """Unit-test suite for `power_docx.text.run.Run`."""
 
     @pytest.mark.parametrize(
         ("r_cxml", "bool_prop_name", "expected_value"),
@@ -381,7 +381,7 @@ class DescribeRun:
 
     @pytest.fixture
     def Font_(self, request: FixtureRequest):
-        return class_mock(request, "docx.text.run.Font")
+        return class_mock(request, "power_docx.text.run.Font")
 
     @pytest.fixture
     def font_(self, request: FixtureRequest):
@@ -389,7 +389,7 @@ class DescribeRun:
 
     @pytest.fixture
     def InlineShape_(self, request: FixtureRequest):
-        return class_mock(request, "docx.text.run.InlineShape")
+        return class_mock(request, "power_docx.text.run.InlineShape")
 
     @pytest.fixture
     def paragraph_(self, request: FixtureRequest):
@@ -405,4 +405,4 @@ class DescribeRun:
 
     @pytest.fixture
     def Text_(self, request: FixtureRequest):
-        return class_mock(request, "docx.text.run._Text")
+        return class_mock(request, "power_docx.text.run._Text")

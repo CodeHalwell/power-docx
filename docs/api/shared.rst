@@ -4,7 +4,7 @@
 Shared classes
 ==============
 
-.. currentmodule:: docx.shared
+.. currentmodule:: power_docx.shared
 
 
 Length objects

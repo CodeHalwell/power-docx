@@ -1,12 +1,12 @@
-"""Unit test suite for the docx.parts.hdrftr module."""
+"""Unit test suite for the power_docx.parts.hdrftr module."""
 
 import pytest
 
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.part import PartFactory
-from docx.package import Package
-from docx.parts.hdrftr import FooterPart, HeaderPart
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from power_docx.opc.part import PartFactory
+from power_docx.package import Package
+from power_docx.parts.hdrftr import FooterPart, HeaderPart
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import function_mock, initializer_mock, instance_mock, method_mock
@@ -75,7 +75,7 @@ class DescribeFooterPart:
 
     @pytest.fixture
     def parse_xml_(self, request):
-        return function_mock(request, "docx.parts.hdrftr.parse_xml")
+        return function_mock(request, "power_docx.parts.hdrftr.parse_xml")
 
 
 class DescribeHeaderPart:
@@ -141,4 +141,4 @@ class DescribeHeaderPart:
 
     @pytest.fixture
     def parse_xml_(self, request):
-        return function_mock(request, "docx.parts.hdrftr.parse_xml")
+        return function_mock(request, "power_docx.parts.hdrftr.parse_xml")

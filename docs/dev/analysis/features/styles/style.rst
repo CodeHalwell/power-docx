@@ -379,7 +379,7 @@ Style.base_style::
     None
     >>> style.base_style = styles['Normal']
     >>> style.base_style
-    <docx.styles.style._ParagraphStyle object at 0x10a7a9550>
+    <power_docx.styles.style._ParagraphStyle object at 0x10a7a9550>
     >>> style.base_style.name
     'Normal'
 

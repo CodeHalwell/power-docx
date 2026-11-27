@@ -1,11 +1,11 @@
-"""Test suite for docx.image.bmp module."""
+"""Test suite for power_docx.image.bmp module."""
 
 import io
 
 import pytest
 
-from docx.image.bmp import Bmp
-from docx.image.constants import MIME_TYPE
+from power_docx.image.bmp import Bmp
+from power_docx.image.constants import MIME_TYPE
 
 from ..unitutil.mock import ANY, initializer_mock
 

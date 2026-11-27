@@ -1,12 +1,12 @@
-"""Unit test suite for docx.opc.pkgreader module."""
+"""Unit test suite for power_docx.opc.pkgreader module."""
 
 import pytest
 
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.constants import RELATIONSHIP_TARGET_MODE as RTM
-from docx.opc.packuri import PackURI
-from docx.opc.phys_pkg import _ZipPkgReader
-from docx.opc.pkgreader import (
+from power_docx.opc.constants import CONTENT_TYPE as CT
+from power_docx.opc.constants import RELATIONSHIP_TARGET_MODE as RTM
+from power_docx.opc.packuri import PackURI
+from power_docx.opc.phys_pkg import _ZipPkgReader
+from power_docx.opc.pkgreader import (
     PackageReader,
     _ContentTypeMap,
     _SerializedPart,
@@ -220,7 +220,7 @@ class DescribePackageReader:
 
     @pytest.fixture
     def PhysPkgReader_(self):
-        p = patch("docx.opc.pkgreader.PhysPkgReader", spec_set=_ZipPkgReader)
+        p = patch("power_docx.opc.pkgreader.PhysPkgReader", spec_set=_ZipPkgReader)
         yield p.start()
         p.stop()
 
@@ -232,11 +232,11 @@ class DescribePackageReader:
 
     @pytest.fixture
     def _SerializedPart_(self, request):
-        return class_mock(request, "docx.opc.pkgreader._SerializedPart")
+        return class_mock(request, "power_docx.opc.pkgreader._SerializedPart")
 
     @pytest.fixture
     def _SerializedRelationships_(self, request):
-        return class_mock(request, "docx.opc.pkgreader._SerializedRelationships")
+        return class_mock(request, "power_docx.opc.pkgreader._SerializedRelationships")
 
     @pytest.fixture
     def sparts_(self, request, partnames_, content_types_, reltypes_, blobs_):
@@ -487,8 +487,8 @@ class Describe_SerializedRelationships:
 
     @pytest.fixture
     def parse_xml_(self, request):
-        return function_mock(request, "docx.opc.pkgreader.parse_xml")
+        return function_mock(request, "power_docx.opc.pkgreader.parse_xml")
 
     @pytest.fixture
     def _SerializedRelationship_(self, request):
-        return class_mock(request, "docx.opc.pkgreader._SerializedRelationship")
+        return class_mock(request, "power_docx.opc.pkgreader._SerializedRelationship")

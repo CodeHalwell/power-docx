@@ -1,15 +1,15 @@
-"""Unit test suite for the docx.parts.story module."""
+"""Unit test suite for the power_docx.parts.story module."""
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
-from docx.image.image import Image
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.package import Package
-from docx.parts.document import DocumentPart
-from docx.parts.image import ImagePart
-from docx.parts.story import StoryPart
-from docx.styles.style import BaseStyle
+from power_docx.enum.style import WD_STYLE_TYPE
+from power_docx.image.image import Image
+from power_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from power_docx.package import Package
+from power_docx.parts.document import DocumentPart
+from power_docx.parts.image import ImagePart
+from power_docx.parts.story import StoryPart
+from power_docx.styles.style import BaseStyle
 
 from ..unitutil.cxml import element
 from ..unitutil.file import snippet_text

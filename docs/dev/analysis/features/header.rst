@@ -58,7 +58,7 @@ Every section has a header; it is never None::
 
     >>> header = section.header
     >>> header
-    <docx.hdrftr.Header object at 0x02468ACE>
+    <power_docx.hdrftr.Header object at 0x02468ACE>
 
 
 There are three header properties on |Section|: `.header`,

@@ -1,8 +1,8 @@
-"""Test suite for the docx.opc.packuri module."""
+"""Test suite for the power_docx.opc.packuri module."""
 
 import pytest
 
-from docx.opc.packuri import PackURI
+from power_docx.opc.packuri import PackURI
 
 
 class DescribePackURI:

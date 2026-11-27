@@ -4,10 +4,10 @@ import hashlib
 
 from behave import given, then, when
 
-from docx import Document
-from docx.enum.shape import WD_INLINE_SHAPE
-from docx.shape import InlineShape
-from docx.shared import Inches
+from power_docx import Document
+from power_docx.enum.shape import WD_INLINE_SHAPE
+from power_docx.shape import InlineShape
+from power_docx.shared import Inches
 
 from helpers import test_docx
 

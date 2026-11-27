@@ -5,7 +5,7 @@ Tab Stops
 WordprocessingML allows for custom specification of tab stops at the
 paragraph level.  Tab stop spacing is a subset of paragraph formatting in
 this system, so will be implemented within the
-docx.text.parfmt.ParagraphFormatting object.  Tab stops will be handled as
+power_docx.text.parfmt.ParagraphFormatting object.  Tab stops will be handled as
 a List-like TabStops object made up of TabStop objects.
 
 A TabStop object has three properties, alignment, leader, and position.
@@ -27,7 +27,7 @@ Getting and setting tab stops::
 
     >>> tab_stops = paragraph.paragraph_format.tab_stops
     >>> tab_stops
-    <docx.text.parfmt.TabStops object at 0x104ea8c30>
+    <power_docx.text.parfmt.TabStops object at 0x104ea8c30>
 
     >>> tab_stop = tab_stops.add_tab_stop(Inches(2), WD_TAB_ALIGNMENT.LEFT, WD_TAB_LEADER.DOTS)
 

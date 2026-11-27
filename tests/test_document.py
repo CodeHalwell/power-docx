@@ -1,7 +1,7 @@
 # pyright: reportPrivateUsage=false
 # pyright: reportUnknownMemberType=false
 
-"""Unit test suite for the docx.document module."""
+"""Unit test suite for the power_docx.document module."""
 
 from __future__ import annotations
 
@@ -9,21 +9,21 @@ from typing import cast
 
 import pytest
 
-from docx.comments import Comment, Comments
-from docx.document import Document, _Body
-from docx.enum.section import WD_SECTION
-from docx.enum.text import WD_BREAK
-from docx.opc.coreprops import CoreProperties
-from docx.oxml.document import CT_Body, CT_Document
-from docx.parts.document import DocumentPart
-from docx.section import Section, Sections
-from docx.settings import Settings
-from docx.shape import InlineShape, InlineShapes
-from docx.shared import Length
-from docx.styles.styles import Styles
-from docx.table import Table
-from docx.text.paragraph import Paragraph
-from docx.text.run import Run
+from power_docx.comments import Comment, Comments
+from power_docx.document import Document, _Body
+from power_docx.enum.section import WD_SECTION
+from power_docx.enum.text import WD_BREAK
+from power_docx.opc.coreprops import CoreProperties
+from power_docx.oxml.document import CT_Body, CT_Document
+from power_docx.parts.document import DocumentPart
+from power_docx.section import Section, Sections
+from power_docx.settings import Settings
+from power_docx.shape import InlineShape, InlineShapes
+from power_docx.shared import Length
+from power_docx.styles.styles import Styles
+from power_docx.table import Table
+from power_docx.text.paragraph import Paragraph
+from power_docx.text.run import Run
 
 from .unitutil.cxml import element, xml
 from .unitutil.mock import (
@@ -37,7 +37,7 @@ from .unitutil.mock import (
 
 
 class DescribeDocument:
-    """Unit-test suite for `docx.document.Document`."""
+    """Unit-test suite for `power_docx.document.Document`."""
 
     def it_can_add_a_comment(
         self,
@@ -294,7 +294,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def _Body_(self, request: FixtureRequest):
-        return class_mock(request, "docx.document._Body")
+        return class_mock(request, "power_docx.document._Body")
 
     @pytest.fixture
     def body_(self, request: FixtureRequest):
@@ -359,7 +359,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def Section_(self, request: FixtureRequest):
-        return class_mock(request, "docx.document.Section")
+        return class_mock(request, "power_docx.document.Section")
 
     @pytest.fixture
     def section_(self, request: FixtureRequest):
@@ -367,7 +367,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def Sections_(self, request: FixtureRequest):
-        return class_mock(request, "docx.document.Sections")
+        return class_mock(request, "power_docx.document.Sections")
 
     @pytest.fixture
     def sections_(self, request: FixtureRequest):
@@ -395,7 +395,7 @@ class DescribeDocument:
 
 
 class Describe_Body:
-    """Unit-test suite for `docx.document._Body`."""
+    """Unit-test suite for `power_docx.document._Body`."""
 
     @pytest.mark.parametrize(
         ("cxml", "expected_cxml"),

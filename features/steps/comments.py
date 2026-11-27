@@ -5,9 +5,9 @@ import datetime as dt
 from behave import given, then, when
 from behave.runner import Context
 
-from docx import Document
-from docx.comments import Comment, Comments
-from docx.drawing import Drawing
+from power_docx import Document
+from power_docx.comments import Comment, Comments
+from power_docx.drawing import Drawing
 
 from helpers import test_docx
 

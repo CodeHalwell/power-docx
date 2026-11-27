@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.shape module."""
+"""Test suite for the power_docx.shape module."""
 
 from __future__ import annotations
 
@@ -8,20 +8,20 @@ from typing import cast
 
 import pytest
 
-from docx.document import Document
-from docx.enum.shape import WD_INLINE_SHAPE
-from docx.oxml.document import CT_Body
-from docx.oxml.ns import nsmap
-from docx.oxml.shape import CT_Inline
-from docx.shape import InlineShape, InlineShapes
-from docx.shared import Emu, Length
+from power_docx.document import Document
+from power_docx.enum.shape import WD_INLINE_SHAPE
+from power_docx.oxml.document import CT_Body
+from power_docx.oxml.ns import nsmap
+from power_docx.oxml.shape import CT_Inline
+from power_docx.shape import InlineShape, InlineShapes
+from power_docx.shared import Emu, Length
 
 from .unitutil.cxml import element, xml
 from .unitutil.mock import FixtureRequest, Mock, instance_mock
 
 
 class DescribeInlineShapes:
-    """Unit-test suite for `docx.shape.InlineShapes` objects."""
+    """Unit-test suite for `power_docx.shape.InlineShapes` objects."""
 
     def it_knows_how_many_inline_shapes_it_contains(self, body: CT_Body, document_: Mock):
         inline_shapes = InlineShapes(body, document_)
@@ -63,7 +63,7 @@ class DescribeInlineShapes:
 
 
 class DescribeInlineShape:
-    """Unit-test suite for `docx.shape.InlineShape` objects."""
+    """Unit-test suite for `power_docx.shape.InlineShape` objects."""
 
     @pytest.mark.parametrize(
         ("uri", "content_cxml", "expected_value"),

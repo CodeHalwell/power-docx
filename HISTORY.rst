@@ -3,6 +3,17 @@
 Release History
 ---------------
 
+Unreleased
+++++++++++
+
+- Rename the distribution to ``power-docx`` and the top-level package to
+  ``power_docx`` (2.0.0), so the fork installs side-by-side with upstream
+  ``python-docx``. Replace ``docx`` with ``power_docx`` in imports.
+- Add ``ROADMAP.md``, agent guidance (``AGENTS.md``/``CLAUDE.md``), a
+  contribution guide, a pull-request template, and GitHub Actions CI;
+  remove the legacy ``.travis.yml``.
+
+
 1.2.0 (2025-06-16)
 ++++++++++++++++++
 

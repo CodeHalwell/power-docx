@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.text.run module."""
+"""Test suite for the power_docx.text.run module."""
 
 from __future__ import annotations
 
@@ -9,18 +9,18 @@ from typing import cast
 import pytest
 from _pytest.fixtures import FixtureRequest
 
-from docx.dml.color import ColorFormat
-from docx.enum.text import WD_COLOR, WD_UNDERLINE
-from docx.oxml.text.run import CT_R
-from docx.shared import Length, Pt
-from docx.text.font import Font
+from power_docx.dml.color import ColorFormat
+from power_docx.enum.text import WD_COLOR, WD_UNDERLINE
+from power_docx.oxml.text.run import CT_R
+from power_docx.shared import Length, Pt
+from power_docx.text.font import Font
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import Mock, class_mock, instance_mock
 
 
 class DescribeFont:
-    """Unit-test suite for `docx.text.font.Font`."""
+    """Unit-test suite for `power_docx.text.font.Font`."""
 
     def it_provides_access_to_its_color_object(self, ColorFormat_: Mock, color_: Mock):
         r = cast(CT_R, element("w:r"))
@@ -422,4 +422,4 @@ class DescribeFont:
 
     @pytest.fixture
     def ColorFormat_(self, request: FixtureRequest, color_: Mock):
-        return class_mock(request, "docx.text.font.ColorFormat", return_value=color_)
+        return class_mock(request, "power_docx.text.font.ColorFormat", return_value=color_)

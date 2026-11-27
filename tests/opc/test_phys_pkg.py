@@ -1,4 +1,4 @@
-"""Test suite for docx.opc.phys_pkg module."""
+"""Test suite for power_docx.opc.phys_pkg module."""
 
 import hashlib
 import io
@@ -6,9 +6,9 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 import pytest
 
-from docx.opc.exceptions import PackageNotFoundError
-from docx.opc.packuri import PACKAGE_URI, PackURI
-from docx.opc.phys_pkg import (
+from power_docx.opc.exceptions import PackageNotFoundError
+from power_docx.opc.packuri import PACKAGE_URI, PackURI
+from power_docx.opc.phys_pkg import (
     PhysPkgReader,
     PhysPkgWriter,
     _DirPkgReader,
@@ -174,9 +174,9 @@ class DescribeZipPkgWriter:
 
 @pytest.fixture
 def tmp_docx_path(tmpdir):
-    return str(tmpdir.join("test_python-docx.docx"))
+    return str(tmpdir.join("test_python-power_docx.docx"))
 
 
 @pytest.fixture
 def ZipFile_(request):
-    return class_mock(request, "docx.opc.phys_pkg.ZipFile")
+    return class_mock(request, "power_docx.opc.phys_pkg.ZipFile")

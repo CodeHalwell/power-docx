@@ -1,9 +1,9 @@
-"""Test suite for the docx.styles.style module."""
+"""Test suite for the power_docx.styles.style module."""
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
-from docx.styles.style import (
+from power_docx.enum.style import WD_STYLE_TYPE
+from power_docx.styles.style import (
     BaseStyle,
     CharacterStyle,
     ParagraphStyle,
@@ -11,8 +11,8 @@ from docx.styles.style import (
     _NumberingStyle,
     _TableStyle,
 )
-from docx.text.font import Font
-from docx.text.parfmt import ParagraphFormat
+from power_docx.text.font import Font
+from power_docx.text.parfmt import ParagraphFormat
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import call, class_mock, function_mock, instance_mock
@@ -56,7 +56,7 @@ class DescribeStyleFactory:
     @pytest.fixture
     def ParagraphStyle_(self, request, paragraph_style_):
         return class_mock(
-            request, "docx.styles.style.ParagraphStyle", return_value=paragraph_style_
+            request, "power_docx.styles.style.ParagraphStyle", return_value=paragraph_style_
         )
 
     @pytest.fixture
@@ -66,7 +66,7 @@ class DescribeStyleFactory:
     @pytest.fixture
     def CharacterStyle_(self, request, character_style_):
         return class_mock(
-            request, "docx.styles.style.CharacterStyle", return_value=character_style_
+            request, "power_docx.styles.style.CharacterStyle", return_value=character_style_
         )
 
     @pytest.fixture
@@ -75,7 +75,7 @@ class DescribeStyleFactory:
 
     @pytest.fixture
     def _TableStyle_(self, request, table_style_):
-        return class_mock(request, "docx.styles.style._TableStyle", return_value=table_style_)
+        return class_mock(request, "power_docx.styles.style._TableStyle", return_value=table_style_)
 
     @pytest.fixture
     def table_style_(self, request):
@@ -84,7 +84,7 @@ class DescribeStyleFactory:
     @pytest.fixture
     def _NumberingStyle_(self, request, numbering_style_):
         return class_mock(
-            request, "docx.styles.style._NumberingStyle", return_value=numbering_style_
+            request, "power_docx.styles.style._NumberingStyle", return_value=numbering_style_
         )
 
     @pytest.fixture
@@ -459,7 +459,7 @@ class DescribeCharacterStyle:
 
     @pytest.fixture
     def Font_(self, request, font_):
-        return class_mock(request, "docx.styles.style.Font", return_value=font_)
+        return class_mock(request, "power_docx.styles.style.Font", return_value=font_)
 
     @pytest.fixture
     def font_(self, request):
@@ -471,7 +471,7 @@ class DescribeCharacterStyle:
 
     @pytest.fixture
     def StyleFactory_(self, request):
-        return function_mock(request, "docx.styles.style.StyleFactory")
+        return function_mock(request, "power_docx.styles.style.StyleFactory")
 
 
 class DescribeParagraphStyle:
@@ -545,7 +545,7 @@ class DescribeParagraphStyle:
     @pytest.fixture
     def ParagraphFormat_(self, request, paragraph_format_):
         return class_mock(
-            request, "docx.styles.style.ParagraphFormat", return_value=paragraph_format_
+            request, "power_docx.styles.style.ParagraphFormat", return_value=paragraph_format_
         )
 
     @pytest.fixture

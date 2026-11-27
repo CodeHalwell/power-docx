@@ -22,7 +22,7 @@ Candidate Protocol
 
   >>> document = Document()
   >>> document.settings
-  <docx.settings.Settings object at 0xdeadbeef4>
+  <power_docx.settings.Settings object at 0xdeadbeef4>
 
 
 Specimen XML

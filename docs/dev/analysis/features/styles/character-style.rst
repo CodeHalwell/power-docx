@@ -18,7 +18,7 @@ Get run style::
     >>> run = p.add_run()
 
     >>> run.style
-    <docx.styles.style._CharacterStyle object at 0x1053ab5d0>
+    <power_docx.styles.style._CharacterStyle object at 0x1053ab5d0>
     >>> run.style.name
     'Default Paragraph Font'
 

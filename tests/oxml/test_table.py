@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.oxml.text module."""
+"""Test suite for the power_docx.oxml.text module."""
 
 from __future__ import annotations
 
@@ -8,10 +8,10 @@ from typing import cast
 
 import pytest
 
-from docx.exceptions import InvalidSpanError
-from docx.oxml.parser import parse_xml
-from docx.oxml.table import CT_Row, CT_Tbl, CT_Tc
-from docx.oxml.text.paragraph import CT_P
+from power_docx.exceptions import InvalidSpanError
+from power_docx.oxml.parser import parse_xml
+from power_docx.oxml.table import CT_Row, CT_Tbl, CT_Tc
+from power_docx.oxml.text.paragraph import CT_P
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.file import snippet_seq
@@ -41,7 +41,7 @@ class DescribeCT_Row:
 
 
 class DescribeCT_Tc:
-    """Unit-test suite for `docx.oxml.table.CT_Tc` objects."""
+    """Unit-test suite for `power_docx.oxml.table.CT_Tc` objects."""
 
     @pytest.mark.parametrize(
         ("tr_cxml", "tc_idx", "expected_value"),

@@ -1,8 +1,8 @@
-"""Test suite for the docx.oxml.styles module."""
+"""Test suite for the power_docx.oxml.styles module."""
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
+from power_docx.enum.style import WD_STYLE_TYPE
 
 from ..unitutil.cxml import element, xml
 

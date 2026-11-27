@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.table module."""
+"""Test suite for the power_docx.table module."""
 
 from __future__ import annotations
 
@@ -8,20 +8,20 @@ from typing import cast
 
 import pytest
 
-from docx.document import Document
-from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.table import (
+from power_docx.document import Document
+from power_docx.enum.style import WD_STYLE_TYPE
+from power_docx.enum.table import (
     WD_ALIGN_VERTICAL,
     WD_ROW_HEIGHT,
     WD_TABLE_ALIGNMENT,
     WD_TABLE_DIRECTION,
 )
-from docx.oxml.parser import parse_xml
-from docx.oxml.table import CT_Row, CT_Tbl, CT_TblGridCol, CT_Tc
-from docx.parts.document import DocumentPart
-from docx.shared import Emu, Inches, Length
-from docx.table import Table, _Cell, _Column, _Columns, _Row, _Rows
-from docx.text.paragraph import Paragraph
+from power_docx.oxml.parser import parse_xml
+from power_docx.oxml.table import CT_Row, CT_Tbl, CT_TblGridCol, CT_Tc
+from power_docx.parts.document import DocumentPart
+from power_docx.shared import Emu, Inches, Length
+from power_docx.table import Table, _Cell, _Column, _Columns, _Row, _Rows
+from power_docx.text.paragraph import Paragraph
 
 from .unitutil.cxml import element, xml
 from .unitutil.file import snippet_seq
@@ -29,7 +29,7 @@ from .unitutil.mock import FixtureRequest, Mock, instance_mock, property_mock
 
 
 class DescribeTable:
-    """Unit-test suite for `docx.table._Rows` objects."""
+    """Unit-test suite for `power_docx.table._Rows` objects."""
 
     def it_can_add_a_row(self, document_: Mock):
         snippets = snippet_seq("add-row-col")
@@ -324,7 +324,7 @@ class DescribeTable:
 
 
 class Describe_Cell:
-    """Unit-test suite for `docx.table._Cell` objects."""
+    """Unit-test suite for `power_docx.table._Cell` objects."""
 
     @pytest.mark.parametrize(
         ("tc_cxml", "expected_value"),
@@ -540,7 +540,7 @@ class Describe_Cell:
 
 
 class Describe_Column:
-    """Unit-test suite for `docx.table._Cell` objects."""
+    """Unit-test suite for `power_docx.table._Cell` objects."""
 
     def it_provides_access_to_its_cells(self, _index_prop_: Mock, table_prop_: Mock, table_: Mock):
         table_prop_.return_value = table_
@@ -621,7 +621,7 @@ class Describe_Column:
 
 
 class Describe_Columns:
-    """Unit-test suite for `docx.table._Columns` objects."""
+    """Unit-test suite for `power_docx.table._Columns` objects."""
 
     def it_has_sequence_behaviors(self, table_: Mock):
         columns = _Columns(cast(CT_Tbl, element("w:tbl/w:tblGrid/(w:gridCol,w:gridCol)")), table_)
@@ -656,7 +656,7 @@ class Describe_Columns:
 
 
 class Describe_Row:
-    """Unit-test suite for `docx.table._Row` objects."""
+    """Unit-test suite for `power_docx.table._Row` objects."""
 
     @pytest.mark.parametrize(
         ("tr_cxml", "expected_value"),
@@ -848,7 +848,7 @@ class Describe_Row:
 
 
 class Describe_Rows:
-    """Unit-test suite for `docx.table._Rows` objects."""
+    """Unit-test suite for `power_docx.table._Rows` objects."""
 
     @pytest.mark.parametrize(
         ("tbl_cxml", "expected_len"),
